@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.svg';
 function DropdownPlats (){
     return (
       <div className="dropdown dropdown-hover">
-          <div tabIndex={0} role="button" className="m-1">Hover</div>
+          <div tabIndex={0} role="button" className="m-1">Plats</div>
           <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
               <li>
                   <Link to="/starters">Starters</Link>
@@ -26,7 +26,7 @@ function DropdownPlats (){
 function Navbar() {
     return (
       <header>
-      <nav className="navbar d-flex justify-around align-items-center">
+      <nav className="navbar d-flex justify-around align-items-center bg-blue-300">
               <div className="navbar-brand">
                   <img src={logo} alt="restaurant logo"/>
               </div>

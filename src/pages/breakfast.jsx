@@ -1,5 +1,5 @@
 function Breakfast (){
-	return <h1>Home</h1>
+	return <h1>Breakfast</h1>
 }
 
 export default Breakfast;

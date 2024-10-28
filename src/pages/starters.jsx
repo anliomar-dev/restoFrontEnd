@@ -1,5 +1,5 @@
 function Starters (){
-	return <h1>Home</h1>
+	return <h1>Starters</h1>
 }
 
 export default Starters;
