@@ -3,23 +3,23 @@ import logo from '../assets/images/logo.svg';
 
 function DropdownPlats (){
     return (
-      <div className="dropdown dropdown-hover pe-2">
+      <>
           <div tabIndex={0} role="button" className="m-1">Plats</div>
           <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-              <li>
+              <li className="link-dropdown">
                   <Link to="/starters">Starters</Link>
               </li>
-              <li>
+              <li className="link-dropdown">
                   <Link to="/breakfast">breakfast</Link>
               </li>
-              <li>
+              <li className="link-dropdown">
                   <Link to="/lunch">Lunch</Link>
               </li>
-              <li>
+              <li className="link-dropdown">
                   <Link to="/dinner">Dinner</Link>
               </li>
           </ul>
-      </div>
+      </>
     )
 }
 
@@ -39,10 +39,10 @@ function Navbar() {
                   <li className="mx-2 py-3 px-3"><a href="#services">Services</a></li>
                   <li className="mx-2 py-3 px-3"><a href="#gallerie">Gallerie</a></li>
                   <li className="mx-2 py-3 px-3"><a href="#chefs">Chefs</a></li>
-                  <li className="mx-2 py-3 px-3">
+                  <li className="mx-2 py-3 px-3 dropdown dropdown-hover pe-2">
                       <DropdownPlats />
                   </li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li className="mx-2 py-3 px-3"><a href="#contact">Contact</a></li>
               </ul>
               <div className="navbar-reservation">
                   <a

@@ -18,13 +18,34 @@ $nav-font: "Inter",  sans-serif;
 
 
 .navbar-menu {
-  li{
+  li {
+    position: relative; // Ajoutez position relative ici
     color: $link;
     transition: color 0.3s ease-in-out;
     font: $nav-font;
     font-weight: 500;
-    &:hover{
+
+    // Exclure les liens du dropdown
+    &:not(.dropdown li)::after {
+      content: "";
+      position: absolute;
+      bottom: 0; // Déplacer l'animation juste en dessous du texte
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: $accent;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
       color: $linkHover;
+
+      // Appliquer uniquement aux éléments qui ne sont pas dans le dropdown
+      &:not(.dropdown li)::after {
+        width: 100%;
+        left: 0;
+      }
     }
   }
 }
+
