@@ -8,7 +8,7 @@
 function CallToActionBtn(props) {
 	return (
 	  props.isBtn ? (
-		<button className={`btn bg-accent hover:bg-accentHover text-white ${props.className}`}>
+		<button type={props.type} className={`btn bg-accent hover:bg-accentHover text-white ${props.className}`}>
 			{props.children}
 		</button>
 	  ) : (

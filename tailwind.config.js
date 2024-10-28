@@ -14,17 +14,17 @@ export default {
         buttonSecondaryHover: '#218838', // Couleur de fond du bouton secondaire au survol
         background: '#ffffff',   // Couleur de fond principale
         secondaryBackground: '#f2f2f2',    // Couleur de fond secondaire
-        default: '#212529',       // Couleur du texte général
-        heading: '#37373f',       // Couleur pour les titres
+        textDefault: '#37373f',       // Couleur du texte général
+        headingTitle: '#212529',       // Couleur pour les titres
         surface: '#ffffff',       // Couleur de surface pour les éléments séparés
         context: '#ffc107',       // Couleur pour les promotions spéciales
         link: '#8e74d5', // Couleur principale des liens
         linkHover: '#a435d0',// Couleur des liens (violet)
-        muted: '#6c757d',         // Couleur pour le texte secondaire ou moins important
+        muted: '#5f656e',         // Couleur pour le texte secondaire ou moins important
       },
       fontFamily: {
-        default: ['Roboto', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Liberation Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-        heading: ['Amatic SC', 'sans-serif'],
+        defaultFont: ['Roboto', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Liberation Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+        headingFont: ['Amatic SC', 'sans-serif'],
         nav: ['Inter', 'sans-serif'],
       },
     },

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
-import CallToActionBtn from "./forms/callToActionBtn.jsx";
+import CallToActionBtn from "./callToActionBtn.jsx";
 
 function DropdownPlats (){
     return (
