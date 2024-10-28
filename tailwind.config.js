@@ -20,7 +20,6 @@ export default {
         context: '#ffc107',       // Couleur pour les promotions spéciales
         link: '#8e74d5', // Couleur principale des liens
         linkHover: '#a435d0',// Couleur des liens (violet)
-        button: '#28a745',        // Couleur des boutons de confirmation
         muted: '#6c757d',         // Couleur pour le texte secondaire ou moins important
       },
     },
