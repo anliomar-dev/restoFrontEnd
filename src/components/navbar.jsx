@@ -26,7 +26,7 @@ function DropdownPlats (){
 function Navbar() {
     return (
       <header>
-      <nav className="navbar bg-background d-flex justify-around align-items-center py-4">
+        <nav className="navbar bg-background d-flex justify-around align-items-center py-4">
               <div className="navbar-brand">
                   <img src={logo} alt="restaurant logo" className="" />
               </div>
