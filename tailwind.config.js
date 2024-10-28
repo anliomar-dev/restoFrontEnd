@@ -22,6 +22,11 @@ export default {
         linkHover: '#a435d0',// Couleur des liens (violet)
         muted: '#6c757d',         // Couleur pour le texte secondaire ou moins important
       },
+      fontFamily: {
+        default: ['Roboto', 'system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Liberation Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+        heading: ['Amatic SC', 'sans-serif'],
+        nav: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [daisyui],
