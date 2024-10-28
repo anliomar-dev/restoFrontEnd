@@ -13,7 +13,7 @@ export default {
         buttonSecondary: '#28a745', // Couleur de fond du bouton secondaire
         buttonSecondaryHover: '#218838', // Couleur de fond du bouton secondaire au survol
         background: '#ffffff',   // Couleur de fond principale
-        secondary: '#f8f9fa',    // Couleur de fond secondaire
+        secondaryBackground: '#f2f2f2',    // Couleur de fond secondaire
         default: '#212529',       // Couleur du texte général
         heading: '#37373f',       // Couleur pour les titres
         surface: '#ffffff',       // Couleur de surface pour les éléments séparés
