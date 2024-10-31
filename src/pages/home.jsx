@@ -6,10 +6,12 @@ import imgCarouselAbout3 from '../assets/images/imgCarouselAbout3.jpg'
 import imgCarouselAbout4 from '../assets/images/imgCarouselAbout4.webp'
 import CallToActionBtn from "../components/callToActionBtn.jsx";
 import { CircleCheck } from "lucide-react";
+import experiencesData from "../experiencesData.jsx";
+
 
 function HeroSection(){
 	return (
-	  <div className="hero bg-secondaryBackground flex justify-around items-center py-16">
+	  <section className="hero bg-secondaryBackground flex justify-around items-center py-16">
 		<div className="hero-body max-w-lg">
 			<h1 className="hero-title font-headingFont font-bold text-headingTitle leading-tight">Profitez d&#39;une nourriture délicieuse et saine</h1>
 			<p className="font-defaultFont text-muted text-lg mt-3">
@@ -19,13 +21,13 @@ function HeroSection(){
 			<CallToActionBtn
 			  isBtn={false} link="#reservation"
 			  text="Réserver une table"
-			  className="rounded-3xl btn-md reservation-btn mt-6"
+			  className="bg-accent hover:bg-accentHover text-white rounded-3xl btn-md reservation-btn mt-6"
 			/>
 		</div>
 		  <div className="hero-img max-w-lg max-h-lg">
 			  <img src={heroImg} alt="hero image" className="w-auto h-auto" />
 		  </div>
-	  </div>
+	  </section>
 	)
 }
 
@@ -100,7 +102,7 @@ function AboutCarousel(){
 
 function AboutSection() {
 	return (
-	  <div className="flex flex-col py-16">
+	  <section className="flex flex-col py-16" id="about-section">
 		  <div className="about-section_header flex flex-col justify-around items-center mb-14">
 			  <h2 className="text-lg text-textDefault mb-5">À propos</h2>
 			  <h3 className="font-headingFont text-headingTitle text-5xl">QUI SOMME NOUS ?</h3>
@@ -114,14 +116,89 @@ function AboutSection() {
 				  </div>
 			  </div>
 			  <div className="w-[500px] ps-16">
-				  <AboutSectionText/>
+				  <AboutSectionText />
 				  <AboutCarousel />
 			  </div>
 		  </div>
+	  </section>
+	)
+}
+
+
+/**
+ * learn more button is used un experience section it return a component
+ * <CalltoactionButton> and his children (a text and a svg icon)
+ *
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function LearnMoreButton(){
+	return(
+	  <CallToActionBtn
+		isBtn={true}
+		className="bg-transparent hover:bg-white
+			    text-white hover:text-red-500 border-transparent
+			    backdrop-brightness-150
+			    rounded-3xl btn-md reservation-btn
+			    mt-6 transition-colors duration-300
+			    "
+	  >
+		 <span className=""> En savoir plus</span>
+		  <svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			strokeWidth="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			className="lucide lucide-chevron-right"
+		  >
+			  <path d="m9 18 6-6-6-6"/>
+		  </svg>
+	  </CallToActionBtn>
+	)
+}
+
+function ExperienceCard(props){
+	return (
+	  <div className="flex flex-col gap-6 justify-center items-center w-72 bg-white py-10 px-10">
+		  <div className="p-4 rounded-full bg-red-50">
+			  {props.icon}
+		  </div>
+		  <h4 className="text-xl font-bold text-center">{props.title}</h4>
+		  <p className="font-defaultFont">
+			  {props.text}
+		  </p>
 	  </div>
 	)
 }
 
+function ExperienceSection() {
+
+	return (
+	  <section className="bg-secondaryBackground flex justify-center gap-x-6 py-16" id="experience-section">
+		  <div className="bg-accentHover w-[420px] py-8 px-6 flex flex-col justify-center">
+			  <h3 className="text-white text-3xl font-bold font-defaultFont mb-7">Pouquoi Nous Choisir</h3>
+			  <p className="text-white text-base">
+				  Chez le banquet, chaque repas est une découverte culinaire,
+				  créée avec soin par nos chefs. Profitez d&#39;une ambiance conviviale et
+				  de saveurs authentiques dans chaque plat.
+			  </p>
+			  <div className="flex justify-center">
+				  <LearnMoreButton/>
+			  </div>
+		  </div>
+		  <div className="flex flex-wrap justify-center gap-6">
+			  {experiencesData.map((experience, index) => (
+				<ExperienceCard key={index} {...experience} />
+			  ))}
+		  </div>
+	  </section>
+	)
+}
 
 
 function Home() {
@@ -129,6 +206,7 @@ function Home() {
 	  <>
 		  <HeroSection/>
 		  <AboutSection/>
+		  <ExperienceSection/>
 	  </>
 	)
 }

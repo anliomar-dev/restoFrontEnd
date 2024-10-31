@@ -37,18 +37,20 @@ function Navbar() {
                   <li className="mx-2 py-3 px-3">
                       <Link to="/">Acceuil</Link>
                   </li>
-                  <li className="mx-2 py-2 px-3"><a href="#apropos">Apropos</a></li>
+                  <li className="mx-2 py-2 px-3"><a href="#about-section">Apropos</a></li>
                   <li className="mx-2 py-2 px-3"><a href="#menu">Menu</a></li>
                   <li className="mx-2 py-2 px-3"><a href="#services">Services</a></li>
                   <li className="mx-2 py-2 px-3"><a href="#gallerie">Gallerie</a></li>
-                  <li className="mx-2 py-2 px-3"><a href="#chefs">Chefs</a></li>
                   <li className="mx-2 py-2 px-3 dropdown dropdown-hover pe-2">
                       <DropdownPlats />
                   </li>
                   <li className="mx-2 py-2 px-3"><a href="#contact">Contact</a></li>
               </ul>
               <div className="navbar-reservation">
-                  <CallToActionBtn isBtn={false} link="#reservation" text="Réserver une table" className="rounded-2xl btn-sm reservation-btn" />
+                  <CallToActionBtn
+                    isBtn={false} link="#reservation"
+                    text="Réserver une table"
+                    className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn" />
               </div>
           </nav>
       </header>
