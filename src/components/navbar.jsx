@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import CallToActionBtn from "./callToActionBtn.jsx";
+import {useEffect} from "react";
 
 function DropdownPlats (){
     return (
@@ -27,24 +28,32 @@ function DropdownPlats (){
 }
 
 function Navbar() {
+    useEffect(() => {
+        const hash = window.location.hash; // Récupère le hash de l'URL
+
+        if (hash) {
+            const element = document.getElementById(hash.replace('#', '')); // Enlève le # pour trouver l'élément
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' }); // Fait défiler vers l'élément
+            }
+        }
+    }, []);
     return (
-      <header>
+      <header className="sticky top-0">
         <nav className="navbar bg-background d-flex justify-around align-items-center py-5">
               <div className="navbar-brand">
                   <img src={logo} alt="restaurant logo" className="" />
               </div>
               <ul className="navbar-menu flex">
-                  <li className="mx-2 py-3 px-3">
-                      <Link to="/">Acceuil</Link>
-                  </li>
-                  <li className="mx-2 py-2 px-3"><a href="#about-section">Apropos</a></li>
-                  <li className="mx-2 py-2 px-3"><a href="#menu">Menu</a></li>
-                  <li className="mx-2 py-2 px-3"><a href="#services">Services</a></li>
-                  <li className="mx-2 py-2 px-3"><a href="#gallerie">Gallerie</a></li>
+                  <li className="mx-2 py-3 px-3"><a href="/#Home">Acceuil</a></li>
+                  <li className="mx-2 py-2 px-3"><a href="/#about-section">Apropos</a></li>
+                  <li className="mx-2 py-2 px-3"><a href="/#menu">Menu</a></li>
+                  <li className="mx-2 py-2 px-3"><a href="/#services">Services</a></li>
+                  <li className="mx-2 py-2 px-3"><a href="/#gallerie">Gallerie</a></li>
                   <li className="mx-2 py-2 px-3 dropdown dropdown-hover pe-2">
                       <DropdownPlats />
                   </li>
-                  <li className="mx-2 py-2 px-3"><a href="#contact">Contact</a></li>
+                  <li className="mx-2 py-2 px-3"><a href="/#contact">Contact</a></li>
               </ul>
               <div className="navbar-reservation">
                   <CallToActionBtn
