@@ -5,7 +5,8 @@ import imgCarouselAbout1 from '../assets/images/imgCarouselAbout1.jpg'
 import imgCarouselAbout3 from '../assets/images/imgCarouselAbout3.jpg'
 import imgCarouselAbout4 from '../assets/images/imgCarouselAbout4.webp'
 import CallToActionBtn from "../components/callToActionBtn.jsx";
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, MapPin, Mail, Phone, Clock } from "lucide-react";
+
 import experiencesData from "../experiencesData.jsx";
 import Input from "../components/forms/input.jsx";
 import Textarea from "../components/forms/textarea.jsx";
@@ -248,7 +249,7 @@ function BooktableSection(){
 
 function MapLocation() {
 	return (
-	  <div className="flex justify-center px-28" id="mapLocation">
+	  <div className="flex justify-center mb-8" id="mapLocation">
 		  <iframe
 		    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d71422.56182577724!2d57.46703620419086!3d-20.247373655275567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b0018cc4555%3A0x87faa690ab43bd46!2sRue%20cinq%20Epices!5e0!3m2!1sfr!2smu!4v1730830922149!5m2!1sfr!2smu"
 			className="lg:w-full h-[350px]"
@@ -263,10 +264,56 @@ function MapLocation() {
 }
 
 
+function ContactInfosCard(props){
+	return (
+	  <>
+		  <div className="border shadow-sm shadow-zinc-200 bg-white rounded-sm flex gap-6 items-center p-6">
+			  {props.children}
+			  <div className="flex flex-col">
+				  <h3 className="font-bold font-defaultFont text-2xl">{props.h3}</h3>
+				  <p>{props.text}</p>
+			  </div>
+		  </div>
+	  </>
+	)
+}
+
+function ContactInfos() {
+	return (
+	  <div className="contact-infos grid gap-6 grid-cols-2">
+		  <ContactInfosCard h3="Adresse" text="Plot E63 Rue épices">
+			  <MapPin
+			    size={55}
+			    className="bg-accentHover p-4 rounded-full text-white"
+			  />
+		  </ContactInfosCard>
+		  <ContactInfosCard h3="Appelez nous" text="+230 5429 7857">
+			  <Phone
+			    size={55}
+			    className="bg-accentHover p-4 rounded-full text-white"
+			  />
+		  </ContactInfosCard>
+		  <ContactInfosCard h3="Email" text="lebanquet@gamil.com">
+			  <Mail
+			    size={55}
+			    className="bg-accentHover p-4 rounded-full text-white"
+			  />
+		  </ContactInfosCard>
+		  <ContactInfosCard h3="Heures d'ouvertures" text="Plot E63 Rue épices">
+			  <Clock
+			    size={55}
+			    className="bg-accentHover p-4 rounded-full text-white"
+			  />
+		  </ContactInfosCard>
+	  </div>
+	)
+}
+
 function ContactSection() {
 	return (
-	  <section className="" id="contact">
+	  <section className="px-28" id="contact">
 		  <MapLocation/>
+		  <ContactInfos/>
 	  </section>
 	)
 }
