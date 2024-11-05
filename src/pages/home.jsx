@@ -170,7 +170,7 @@ function LearnMoreButton(){
 
 function ExperienceCard(props){
 	return (
-	  <div className="flex flex-col gap-6 justify-center items-center w-72 bg-white py-10 px-10">
+	  <div className="flex flex-col gap-6 justify-center items-center w-[268px] bg-white py-10 px-10">
 		  <div className="p-4 rounded-full bg-red-50">
 			  {props.icon}
 		  </div>
@@ -185,7 +185,7 @@ function ExperienceCard(props){
 function ExperienceSection() {
 
 	return (
-	  <section className="bg-secondaryBackground flex justify-center gap-x-6 py-16" id="experience-section">
+	  <section className="bg-secondaryBackground flex justify-center gap-x-6 py-16 px-6" id="experience-section">
 		  <div className="bg-accentHover w-[420px] py-8 px-6 flex flex-col justify-center">
 			  <h3 className="text-white text-3xl font-bold font-defaultFont mb-7">Pouquoi Nous Choisir</h3>
 			  <p className="text-white text-base">
@@ -209,15 +209,15 @@ function ExperienceSection() {
 
 function BooktableSection(){
 	return(
-	  <section className="flex flex-col justify-center items-center py-16" id="reservation">
+	  <section className="flex flex-col justify-center items-center py-16 px-28" id="reservation">
 		  <div>
 			  <h2 className="mb-16 font-headingFont font-bold text-headingTitle text-6xl">Réserver une table</h2>
 		  </div>
 		  <div className="flex justify-center items-center bg-secondaryBackground">
-			  <div className="w-[400px]">
+			  <div className="w-[415px]">
 				  <img src={reservation} alt="reservation image"/>
 			  </div>
-			  <div className="flex flex-col items-center w-[863px] px-10">
+			  <div className="flex flex-col items-center w-[870px] px-10">
 				  <form action="" className="w-full">
 					  <div className="fields flex flex-col gap-4 justify-center">
 						  <div className="inputs w-full grid grid-cols-3 gap-3">
@@ -228,7 +228,7 @@ function BooktableSection(){
 							  <Input type="time" placeholder="" className="col-span-1"/>
 							  <Input type="number" placeholder="Nombre de personnes" className="col-span-1"/>
 						  </div>
-						  <Textarea className="w-full"/>
+						  <Textarea className="w-full" placeholder="Message" />
 					  </div>
 					  <div className="w-full flex justify-center">
 						  <CallToActionBtn
@@ -246,6 +246,31 @@ function BooktableSection(){
 	)
 }
 
+function MapLocation() {
+	return (
+	  <div className="flex justify-center px-28" id="mapLocation">
+		  <iframe
+		    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d71422.56182577724!2d57.46703620419086!3d-20.247373655275567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b0018cc4555%3A0x87faa690ab43bd46!2sRue%20cinq%20Epices!5e0!3m2!1sfr!2smu!4v1730830922149!5m2!1sfr!2smu"
+			className="lg:w-full h-[350px]"
+
+			style={{ border: 0 }}  // Style inline transformé en objet JavaScript
+			allowFullScreen
+			loading="lazy"
+			referrerPolicy="no-referrer-when-downgrade"
+		  ></iframe>
+	  </div>
+	);
+}
+
+
+function ContactSection() {
+	return (
+	  <section className="" id="contact">
+		  <MapLocation/>
+	  </section>
+	)
+}
+
 function Home() {
 	return (
 	  <>
@@ -253,6 +278,7 @@ function Home() {
 		  <AboutSection/>
 		  <ExperienceSection/>
 		  <BooktableSection/>
+		  <ContactSection/>
 	  </>
 	)
 }
