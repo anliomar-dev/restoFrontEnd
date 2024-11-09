@@ -1,5 +1,22 @@
 function Footer() {
-    return <h1>Footer</h1>
+    return (
+      <footer className="footer px-28 flex flex-col items-center">
+          <div className="footer-contact-infos">
+              <div className="">
+                  <div>
+
+                  </div>
+                  <div>
+
+                  </div>
+              </div>
+              <div className=""></div>
+              <div className=""></div>
+              <div className=""></div>
+          </div>
+          <div className="footer-copyright"></div>
+      </footer>
+    )
 }
 
 

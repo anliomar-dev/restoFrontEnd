@@ -208,8 +208,33 @@ function ExperienceSection() {
 }
 
 
-function BooktableSection(){
-	return(
+function BookTableForm() {
+	return <form action="" className="w-full">
+		<div className="fields flex flex-col gap-4 justify-center">
+			<div className="inputs w-full grid grid-cols-3 gap-3">
+				<Input type="text" placeholder="Nom" className="col-span-1"/>
+				<Input type="text" placeholder="Prenom" className="col-span-1"/>
+				<Input type="email" placeholder="Email" className="col-span-1"/>
+				<Input type="date" placeholder="" className="col-span-1"/>
+				<Input type="time" placeholder="" className="col-span-1"/>
+				<Input type="number" placeholder="Nombre de personnes" className="col-span-1"/>
+			</div>
+			<Textarea className="w-full" placeholder="Message"/>
+		</div>
+		<div className="w-full flex justify-center">
+			<CallToActionBtn
+			  isBtn={true}
+			  type="submit"
+			  className="mt-3 bg-accent hover:bg-accentHover rounded-md btn-md text-white px-10"
+			>
+				Rerserver
+			</CallToActionBtn>
+		</div>
+	</form>
+}
+
+function BooktableSection() {
+	return (
 	  <section className="flex flex-col justify-center items-center py-16 px-28" id="reservation">
 		  <div>
 			  <h2 className="mb-16 font-headingFont font-bold text-headingTitle text-6xl">Réserver une table</h2>
@@ -219,28 +244,7 @@ function BooktableSection(){
 				  <img src={reservation} alt="reservation image"/>
 			  </div>
 			  <div className="flex flex-col items-center w-[870px] px-10">
-				  <form action="" className="w-full">
-					  <div className="fields flex flex-col gap-4 justify-center">
-						  <div className="inputs w-full grid grid-cols-3 gap-3">
-							  <Input type="text" placeholder="Nom" className="col-span-1"/>
-							  <Input type="text" placeholder="Prenom" className="col-span-1"/>
-							  <Input type="text" placeholder="Email" className="col-span-1"/>
-							  <Input type="date" placeholder="" className="col-span-1"/>
-							  <Input type="time" placeholder="" className="col-span-1"/>
-							  <Input type="number" placeholder="Nombre de personnes" className="col-span-1"/>
-						  </div>
-						  <Textarea className="w-full" placeholder="Message" />
-					  </div>
-					  <div className="w-full flex justify-center">
-						  <CallToActionBtn
-						    isBtn={true}
-						    type="submit"
-						    className="mt-3 bg-accent hover:bg-accentHover rounded-md btn-md text-white px-10"
-						  >
-							  Rerserver
-						  </CallToActionBtn>
-					  </div>
-				  </form>
+				<BookTableForm />
 			  </div>
 		  </div>
 	  </section>
@@ -249,12 +253,12 @@ function BooktableSection(){
 
 function MapLocation() {
 	return (
-	  <div className="flex justify-center mb-8" id="mapLocation">
+	  <div className="flex justify-center mb-10" id="mapLocation">
 		  <iframe
-		    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d71422.56182577724!2d57.46703620419086!3d-20.247373655275567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b0018cc4555%3A0x87faa690ab43bd46!2sRue%20cinq%20Epices!5e0!3m2!1sfr!2smu!4v1730830922149!5m2!1sfr!2smu"
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d71422.56182577724!2d57.46703620419086!3d-20.247373655275567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b0018cc4555%3A0x87faa690ab43bd46!2sRue%20cinq%20Epices!5e0!3m2!1sfr!2smu!4v1730830922149!5m2!1sfr!2smu"
 			className="lg:w-full h-[350px]"
 
-			style={{ border: 0 }}  // Style inline transformé en objet JavaScript
+			style={{border: 0}}  // Style inline transformé en objet JavaScript
 			allowFullScreen
 			loading="lazy"
 			referrerPolicy="no-referrer-when-downgrade"
@@ -267,10 +271,10 @@ function MapLocation() {
 function ContactInfosCard(props){
 	return (
 	  <>
-		  <div className="border shadow-sm shadow-zinc-200 bg-white rounded-sm flex gap-6 items-center p-6">
+		  <div className="shadow-md border-2 shadow-zinc-200 bg-white rounded-sm flex gap-6 items-center p-6">
 			  {props.children}
 			  <div className="flex flex-col">
-				  <h3 className="font-bold font-defaultFont text-2xl">{props.h3}</h3>
+				  <h3 className="font-bold font-defaultFont text-xl">{props.h3}</h3>
 				  <p>{props.text}</p>
 			  </div>
 		  </div>
@@ -280,7 +284,7 @@ function ContactInfosCard(props){
 
 function ContactInfos() {
 	return (
-	  <div className="contact-infos grid gap-6 grid-cols-2">
+	  <div className="contact-infos mb-6 grid gap-6 grid-cols-2">
 		  <ContactInfosCard h3="Adresse" text="Plot E63 Rue épices">
 			  <MapPin
 			    size={55}
@@ -309,14 +313,42 @@ function ContactInfos() {
 	)
 }
 
+function ContactForm() {
+	return (
+	  <form action="" className="w-full shadow-lg border-2 shadow-zinc-200 bg-white p-10">
+		<div className="fields flex flex-col gap-6 justify-center">
+			<div className="inputs w-full grid grid-cols-2 gap-6">
+				<Input type="text" placeholder="Nom" className="col-span-1"/>
+				<Input type="text" placeholder="Prenom" className="col-span-1"/>
+				<Input type="email" placeholder="Email" className="col-span-1"/>
+				<Input type="text" placeholder="objet" className="col-span-1"/>
+			</div>
+			<Textarea className="w-full" placeholder="Message"/>
+		</div>
+		<div className="w-full flex justify-center">
+			<CallToActionBtn
+			  isBtn={true}
+			  type="submit"
+			  className="mt-5 bg-accent hover:bg-accentHover rounded-full btn-md text-white px-10"
+			>
+				Envoyer
+			</CallToActionBtn>
+		</div>
+	  </form>
+	)
+}
+
 function ContactSection() {
 	return (
 	  <section className="px-28" id="contact">
+		  <h1 className="flex justify-center py-14">Contactez nous pour plus d&#39;informations</h1>
 		  <MapLocation/>
 		  <ContactInfos/>
+		  <ContactForm />
 	  </section>
 	)
 }
+
 
 function Home() {
 	return (
@@ -329,5 +361,5 @@ function Home() {
 	  </>
 	)
 }
-
+/* todo: Menu, Gallery, Footer*/
 export default Home;
