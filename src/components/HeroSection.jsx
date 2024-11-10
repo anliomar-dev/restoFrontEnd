@@ -1,11 +1,8 @@
 import CallToActionBtn from "./callToActionBtn.jsx";
 import heroImg from "../assets/images/heroImg.png";
-
-
 /**
  * HeroSection component that displays the hero section of the homepage with a title,
  * description, and a call-to-action button.
- *
  * @component
  * @returns {JSX.Element} A hero section with a headline, a description, a call-to-action button, and an image.
  *
@@ -19,7 +16,6 @@ function HeroSection(){
 			  <h1 className="hero-title font-headingFont font-bold text-headingTitle leading-tight">Profitez d&#39;une nourriture délicieuse et saine</h1>
 			  <p className="font-defaultFont text-muted text-lg mt-3">
 				  Chez <strong>LE BANQUET</strong>, nous préparons des plats délicieux et sains avec des ingrédients frais et locaux.
-
 			  </p>
 			  <CallToActionBtn
 				isBtn={false} link="#reservation"

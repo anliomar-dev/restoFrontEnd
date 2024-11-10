@@ -3,9 +3,7 @@ function Footer() {
       <footer className="footer px-28 flex flex-col items-center">
           <div className="footer-contact-infos">
               <div className="">
-                  <div>
 
-                  </div>
                   <div>
 
                   </div>
