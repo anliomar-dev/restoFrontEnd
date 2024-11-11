@@ -8,6 +8,7 @@
     --buttonSecondary: #28a745;     /* Couleur de fond du bouton secondaire */
     --buttonSecondaryHover: #218838; /* Couleur de fond du bouton secondaire au survol */
     --background: #ffffff;           /* Couleur de fond principale */
+    --footerColor: #ffffff;
     --secondaryBackground: #f2f2f2;  /* Couleur de fond secondaire */
     --default: #212529;              /* Couleur du texte général */
     --heading: #37373f;              /* Couleur pour les titres */
@@ -26,4 +27,22 @@ body{
 
 html {
     scroll-behavior: smooth;
+}
+
+/*--------------------*/
+/*        footer      */
+/*--------------------*/
+.footer p, .footer h4{
+    color: var(--footerColor);
+}
+/*social media*/
+.social-media a{
+    color: var(--secondaryBackground);
+    border: 1px solid var(--secondaryBackground);
+    border-radius: 100%;
+    transition: color 0.5s ease, border-color 0.5s ease;
+}
+.social-media a:hover{
+    color: var(--accentHover);
+    border-color: var(--accentHover);
 }

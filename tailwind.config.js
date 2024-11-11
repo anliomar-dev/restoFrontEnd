@@ -8,14 +8,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: '#d9534f', // Couleur de fond du bouton principal
+        accent:'#d9534f', // Couleur de fond du bouton principal
         accentHover: '#c9302c', // Couleur de fond du bouton principal au survol
         buttonSecondary: '#28a745', // Couleur de fond du bouton secondaire
         buttonSecondaryHover: '#218838', // Couleur de fond du bouton secondaire au survol
         background: '#ffffff',   // Couleur de fond principale
+        footerColor: '#ffffff',
         secondaryBackground: '#f2f2f2',    // Couleur de fond secondaire
         textDefault: '#37373f',       // Couleur du texte général
         headingTitle: '#212529',       // Couleur pour les titres
+        footerBG: '#212529',
         surface: '#ffffff',       // Couleur de surface pour les éléments séparés
         context: '#ffc107',       // Couleur pour les promotions spéciales
         link: '#8e74d5', // Couleur principale des liens
