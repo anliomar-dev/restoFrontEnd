@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import CallToActionBtn from "./callToActionBtn.jsx";
 import {useEffect} from "react";
+import '../styles/navbar.css'
 
 function DropdownPlats (){
     return (

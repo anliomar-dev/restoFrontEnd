@@ -47,7 +47,7 @@ function AboutCarousel(){
 	return (
 	  <div className="carousel carousel-center
 	    bg-secondaryBackground rounded-box max-w-md
-	    space-x-4 p-4 h-[314px]"
+	    space-x-4 p-4 h-[314px] w-full"
 	  >
 		  <div className="carousel-item">
 			  <img
@@ -93,7 +93,7 @@ function AboutSection() {
 			  <h2 className="text-lg text-textDefault mb-5">À propos</h2>
 			  <h3 className="font-headingFont text-headingTitle text-5xl">QUI SOMME NOUS ?</h3>
 		  </div>
-		  <div className="about-section_body flex justify-center">
+		  <div className="mx-28 h-auto flex justify-center items-center lg:items-start flex-col gap-x-16 gap-y-8 lg:flex-row about-section_body ">
 			  <div className="w-[800px]">
 				  <img src={aboutImage1} alt=""/>
 				  <div className="border-4 border-muted mt-6 py-6 flex flex-col justify-center items-center">
@@ -101,7 +101,7 @@ function AboutSection() {
 					  <p className="text-3xl font-bold text-accentHover">+230 5429 7857</p>
 				  </div>
 			  </div>
-			  <div className="w-[500px] ps-16">
+			  <div className="w-full lg:w-[500px] ">
 				  <AboutSectionText />
 				  <AboutCarousel />
 			  </div>
