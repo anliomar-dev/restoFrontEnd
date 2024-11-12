@@ -13,7 +13,7 @@ function SocialMediaIcons(){
 function Footer() {
     return (
       <footer className="footer px-28 flex flex-col justify-center py-12 bg-footerBG">
-          <div className="footer-contact-infos flex justify-between gap-20">
+          <div className="footer-contact-infos flex justify-between flex-wrap gap-20">
               <div className="flex me-10">
                   <MapPin size={38} className="pe-3 text-accentHover" />
                   <div className="adresse flex flex-col">
