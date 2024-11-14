@@ -88,13 +88,13 @@ function AboutCarousel(){
  */
 function AboutSection() {
 	return (
-	  <section className="flex flex-col py-16" id="about-section">
-		  <div className="about-section_header flex flex-col justify-around items-center mb-14">
+	  <section className="flex flex-col py-16 px-8 md:px-28" id="about-section">
+		  <div className="about-section_header flex flex-col justify-around items-center mb-14 ">
 			  <h2 className="text-lg text-textDefault mb-5">À propos</h2>
 			  <h3 className="font-headingFont text-headingTitle text-5xl">QUI SOMME NOUS ?</h3>
 		  </div>
-		  <div className="mx-28 h-auto flex justify-center items-center lg:items-start flex-col gap-x-16 gap-y-8 lg:flex-row about-section_body ">
-			  <div className="w-[800px]">
+		  <div className=" h-auto flex justify-center items-center lg:items-start flex-col gap-x-16 gap-y-8 lg:flex-row about-section_body ">
+			  <div className="w-auto">
 				  <img src={aboutImage1} alt=""/>
 				  <div className="border-4 border-muted mt-6 py-6 flex flex-col justify-center items-center">
 					  <h3 className="text-headingTitle text-2xl font-bold">Réserver une table</h3>

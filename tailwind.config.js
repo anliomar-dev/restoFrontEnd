@@ -29,6 +29,9 @@ export default {
         headingFont: ['Amatic SC', 'sans-serif'],
         nav: ['Inter', 'sans-serif'],
       },
+      screens: {
+        'w1200': '1200px',  // Point de rupture personnalisé
+      },
     },
   },
   plugins: [daisyui],

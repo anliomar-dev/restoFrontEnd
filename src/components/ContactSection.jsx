@@ -9,10 +9,10 @@ import ContactForm from "./forms/ContactForm.jsx";
  */
 function MapLocation() {
 	return (
-	  <div className="flex justify-center mb-14" id="mapLocation">
+	  <div className="flex justify-center mb-14 w-auto" id="mapLocation">
 		  <iframe
 			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d71422.56182577724!2d57.46703620419086!3d-20.247373655275567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5b0018cc4555%3A0x87faa690ab43bd46!2sRue%20cinq%20Epices!5e0!3m2!1sfr!2smu!4v1730830922149!5m2!1sfr!2smu"
-			className="lg:w-full h-[350px]"
+			className="w-full h-[350px]"
 
 			style={{border: 0}}  // Style inline transformé en objet JavaScript
 			allowFullScreen
@@ -65,7 +65,7 @@ function ContactInfosCard(props){
  */
 function ContactInfos() {
 	return (
-	  <div className="contact-infos mb-6 grid gap-6 grid-cols-2">
+	  <div className="contact-infos mb-6 grid gap-6 grid-cols-1 md:grid-cols-2">
 		  <ContactInfosCard h3="Adresse" text="Plot E63 Rue épices">
 			  <MapPin
 				size={55}
@@ -106,7 +106,7 @@ function ContactInfos() {
  */
 function ContactSection() {
 	return (
-	  <section className="px-28 mt-3 mb-16" id="contact">
+	  <section className="px-8 md:px-28 mt-3 mb-16" id="contact">
 		  <h1 className="flex justify-center py-14 font-headingFont font-bold text-headingTitle text-4xl">
 			  <span className="text-accentHover">Contactez nous </span> pour plus d&#39;informations
 		  </h1>

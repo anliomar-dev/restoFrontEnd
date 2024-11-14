@@ -57,7 +57,7 @@ function LearnMoreButton(){
  */
 function ExperienceCard(props){
 	return (
-	  <div className="flex flex-col gap-6 justify-center items-center w-[268px] bg-white py-10 px-10">
+	  <div className="flex flex-col gap-6 justify-center items-center w-full bg-white py-10 px-10">
 		  <div className="p-4 rounded-full bg-red-50">
 			  {props.icon}
 		  </div>
@@ -80,25 +80,26 @@ function ExperienceCard(props){
  */
 function ExperienceSection() {
 	return (
-	  <section className="bg-secondaryBackground flex justify-center gap-x-6 py-16 px-6" id="experience-section">
-		  <div className="bg-accentHover w-[420px] py-8 px-6 flex flex-col justify-center">
-			  <h3 className="text-white text-3xl font-bold font-defaultFont mb-7">Pouquoi Nous Choisir</h3>
+	  <section className="bg-secondaryBackground flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 py-16 px-8 md:px-28" id="experience-section">
+		  <div className="bg-accentHover w-auto md-w-2/5 max-h-[370px] py-8 px-6 flex flex-col justify-center">
+			  <h3 className="text-white text-3xl font-bold font-defaultFont mb-7">Pourquoi Nous Choisir</h3>
 			  <p className="text-white text-base">
 				  Chez le banquet, chaque repas est une découverte culinaire,
 				  créée avec soin par nos chefs. Profitez d&#39;une ambiance conviviale et
 				  de saveurs authentiques dans chaque plat.
 			  </p>
 			  <div className="flex justify-center">
-				  <LearnMoreButton/>
+				  <LearnMoreButton />
 			  </div>
 		  </div>
-		  <div className="flex flex-wrap justify-center gap-6">
+		  <div className="flex flex-col w1200:flex-row justify-center gap-6">
 			  {experiencesData.map((experience, index) => (
 				<ExperienceCard key={index} {...experience} />
 			  ))}
 		  </div>
 	  </section>
-	)
+	);
 }
+
 
 export default ExperienceSection
