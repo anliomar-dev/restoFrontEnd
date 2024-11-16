@@ -106,8 +106,8 @@ function ContactInfos() {
  */
 function ContactSection() {
 	return (
-	  <section className="px-8 md:px-28 mt-3 mb-16" id="contact">
-		  <h1 className="flex justify-center py-14 font-headingFont font-bold text-headingTitle text-4xl">
+	  <section className="px-8 md:px-28 mt-4 mb-16" id="contact">
+		  <h1 className="mt-5 flex justify-center py-14 font-headingFont font-bold text-headingTitle text-5xl">
 			  <span className="text-accentHover">Contactez nous </span> pour plus d&#39;informations
 		  </h1>
 		  <MapLocation/>

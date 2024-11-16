@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/Experience";
 import BooktableSection from "../components/BooktableSection";
 import ContactSection from "../components/ContactSection.jsx";
+import GalerySection from "../components/galerySection.jsx";
 import {useEffect, useState} from "react";
 
 
@@ -22,6 +23,7 @@ function Home() {
 		  <AboutSection/>
 		  <ExperienceSection/>
 		  <BooktableSection/>
+		  <GalerySection/>
 		  <ContactSection/>
 	  </>
 	)
