@@ -1,23 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 import "../assets/styles/slider.css"; // Import CSS styles for the slider
 import aboutImage1 from "../assets/images/aboutImage1.jpg"; // Import image files
-import imgCarouselAbout1 from "../assets/images/imgCarouselAbout1.jpg";
-import imgCarouselAbout3 from "../assets/images/imgCarouselAbout3.jpg";
-import imgCarouselAbout4 from "../assets/images/imgCarouselAbout4.webp";
 import imgCarouselAbout5 from "../assets/images/imgCarouselAbout5.jpg";
 import reservation from "../assets/images/reservation.jpg";
-import heroImg from "../assets/images/heroImg.png";
+import gallery1 from "../assets/images/gallery1.webp";
+import gallery2 from "../assets/images/gallery2.webp";
+import gallery3 from "../assets/images/gallery3.webp";
+import gallery4 from "../assets/images/gallery4.webp";
+import gallery5 from "../assets/images/gallery5.webp";
+
 
 // Array of images for the slider
 const images = [
 	aboutImage1,
-	imgCarouselAbout1,
-	imgCarouselAbout3,
-	imgCarouselAbout4,
-	imgCarouselAbout5,
-	imgCarouselAbout1, // Repeating one image to create more slides
+	gallery1,
+	gallery2,
+	gallery3,
+	gallery4,
+	gallery5,
 	reservation,
-	heroImg,
+	imgCarouselAbout5,
 ];
 
 const GallerySlider = () => {
@@ -69,7 +71,7 @@ const GallerySlider = () => {
 	const getTranslateX = () =>{
 		if(sliderWidth >= 1200){
 			return currentIndex * 20
-		}else if(sliderWidth >= 993 && sliderWidth <= 1199){
+		}else if(sliderWidth >= 768 && sliderWidth <= 1199){
 			return currentIndex * 33.3;
 		}else{
 			return currentIndex * 100
