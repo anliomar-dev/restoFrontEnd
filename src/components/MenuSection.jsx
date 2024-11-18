@@ -44,7 +44,7 @@ function MenuSection() {
 			  </p>
 		  </div>
 		  <div className="grid grid-cols-3 gap-16 gap-x-8">
-			  {/* Affiche les plats en fonction de la catégorie sélectionnée */}
+			  {/* display dishes by category */}
 			  {loading ? (
 				<p>Loading...</p>
 			  ) : error ? (
