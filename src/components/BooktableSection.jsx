@@ -3,7 +3,7 @@ import BookTableForm from "./forms/BooktableForm.jsx";
 
 function BooktableSection() {
 	return (
-	  <section className="px-8 md:px-28 flex flex-col justify-center items-center py-16" id="reservation">
+	  <section className="px-8 md:px-28 flex flex-col justify-center items-center py-16 mt-5" id="reservation">
 		  <div>
 			  <h2 className="mb-16 font-headingFont font-bold text-headingTitle text-6xl">Réserver une table</h2>
 		  </div>

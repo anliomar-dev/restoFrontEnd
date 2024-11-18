@@ -16,7 +16,9 @@ $default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helveti
 $heading-font: "Amatic SC",  sans-serif;
 $nav-font: "Inter",  sans-serif;
 
-
+/*----------------------------*/
+/*-----------navbar-----------*/
+/*----------------------------*/
 .navbar-menu {
   li {
     position: relative; // Ajoutez position relative ici
@@ -49,6 +51,16 @@ $nav-font: "Inter",  sans-serif;
   }
 }
 
+/*hero title*/
 .hero-title{
   font-size: 64px;
+}
+
+/*----------------*/
+/*---Menu section*/
+/*-----------------*/
+
+.menu-buttons button.menu-btn-active{
+  border-bottom: 3px solid $accent;
+  color: $accent;
 }
