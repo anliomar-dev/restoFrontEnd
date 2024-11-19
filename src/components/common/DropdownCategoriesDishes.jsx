@@ -19,6 +19,9 @@ function DropdownCategoriesDishes (){
 			  <li className="link-dropdown">
 				  <Link to="/dinner">Dinner</Link>
 			  </li>
+			  <li className="link-dropdown">
+				  <Link to="/dessert">Dessert</Link>
+			  </li>
 		  </ul>
 	  </>
 	)
