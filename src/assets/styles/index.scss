@@ -64,3 +64,41 @@ $nav-font: "Inter",  sans-serif;
   border-bottom: 3px solid $accent;
   color: $accent;
 }
+
+/* images */
+
+// Animation pour les images du menu
+@for $i from 1 through 3 {
+  .img-menu-#{$i} {
+    transform: translateY(40px) scale(0.9);
+    opacity: 0;
+    animation: menu-images-animation 0.5s ease-in-out 0.3s + ($i * 0.1s) forwards;
+  }
+}
+
+// Animation pour le corps du plat (dish body)
+@for $i from 1 through 3 {
+  .dish-body-#{$i} {
+    transform: translateY(40px) scale(0.9);
+    opacity: 0;
+    animation: dish-body-animation 0.5s ease-in-out 0.3s + ($i * 0.2s) forwards;
+  }
+}
+
+// Animation pour les images du menu
+@keyframes menu-images-animation {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+// Animation pour le corps du plat
+@keyframes dish-body-animation {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+
