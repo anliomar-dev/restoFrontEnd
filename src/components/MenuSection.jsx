@@ -2,7 +2,7 @@ import { useState } from "react";
 import useFetchDishesByCategory from "../hooks/useFetch";
 import MenuButton from "./forms/menuButton";
 import {Link} from "react-router-dom";
-import CallToActionBtn from "./callToActionBtn.jsx";
+import CallToActionBtn from "./common/callToActionBtn.jsx";
 
 const menuButtons = ["starter", "breakfast", "lunch", "dinner", "dessert"];
 

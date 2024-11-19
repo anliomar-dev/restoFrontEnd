@@ -1,4 +1,4 @@
-import CallToActionBtn from "./callToActionBtn.jsx";
+import CallToActionBtn from "./common/callToActionBtn.jsx";
 import heroImg from "../assets/images/heroImg.png";
 /**
  * HeroSection component that displays the hero section of the homepage with a title,

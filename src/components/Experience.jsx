@@ -1,5 +1,5 @@
 import experiencesData from "../experiencesData.jsx";
-import CallToActionBtn from "./callToActionBtn.jsx";
+import CallToActionBtn from "./common/callToActionBtn.jsx";
 
 /**
  * learn more button is used on experience section it return a component

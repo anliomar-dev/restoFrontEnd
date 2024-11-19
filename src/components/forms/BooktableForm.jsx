@@ -1,6 +1,6 @@
 import Input from "./input.jsx";
 import Textarea from "./textarea.jsx";
-import CallToActionBtn from "../callToActionBtn.jsx";
+import CallToActionBtn from "../common/callToActionBtn.jsx";
 
 /**
  * Display the form to book a table.

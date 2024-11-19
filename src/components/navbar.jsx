@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
-import CallToActionBtn from "./callToActionBtn.jsx";
+import CallToActionBtn from "./common/callToActionBtn.jsx";
 import {useEffect} from "react";
 import '../assets/styles/navbar.css'
 
