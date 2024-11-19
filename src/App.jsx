@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";  // Corriger l'import de Layout
 import Home from "./pages/Home";
 import Lunch from "./pages/Lunch";
-import Starters from "./pages/Starters";
+import Starter from "./pages/starter.jsx";
 import Breakfast from "./pages/Breakfast";  // Corriger le chemin
 import Dinner from "./pages/Dinner";
 
@@ -12,7 +12,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Layout />}>
                   <Route index element={<Home />} />
-                  <Route path="starters" element={<Starters />} />
+                  <Route path="starter" element={<Starter />} />
                   <Route path="breakfast" element={<Breakfast />} />  {/* Corriger le chemin */}
                   <Route path="lunch" element={<Lunch />} />
                   <Route path="dinner" element={<Dinner />} />

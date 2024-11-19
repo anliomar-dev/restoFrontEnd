@@ -12,7 +12,7 @@ function DropdownCategoriesDishes (){
           </div>
           <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
               <li className="link-dropdown">
-                  <Link to="/starters">Starters</Link>
+                  <Link to="/starter">Starters</Link>
               </li>
               <li className="link-dropdown">
                   <Link to="/breakfast">breakfast</Link>
