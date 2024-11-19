@@ -6,18 +6,9 @@ import BooktableSection from "../components/BooktableSection";
 import ContactSection from "../components/ContactSection.jsx";
 import GalerySection from "../components/galerySection.jsx";
 import MenuSection from "../components/MenuSection.jsx";
-import {useEffect, useState} from "react";
 
 
 function Home() {
-	const [dishes, setDishes] = useState([]);
-	useEffect(() => {
-		fetch(`http://localhost:8000/dishes/?category=starter`)
-		.then(res => res.json())
-		.then(data => setDishes(data.results))
-		  .catch(err => console.log(err));
-	}, []);
-	console.log(dishes);
 	return (
 	  <>
 		  <HeroSection/>

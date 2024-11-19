@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.svg';
 import CallToActionBtn from "./common/callToActionBtn.jsx";
+import BurgerIcon from "./common/burgerIcon.jsx";
 import {useEffect} from "react";
 import '../assets/styles/navbar.css'
 
@@ -55,13 +56,16 @@ function Navbar() {
                   </li>
                   <li className="mx-2 py-2 px-3"><a href="/#contact">Contact</a></li>
               </ul>
-              <div className="navbar-reservation">
-                  <CallToActionBtn
-                    isBtn={false} link="#reservation"
-                    text="Réserver une table"
-                    className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn" />
-              </div>
-          </nav>
+            <div className="navbar-reservation">
+                <CallToActionBtn
+                  isBtn={false} link="#reservation"
+                  text="Réserver une table"
+                  className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn"/>
+            </div>
+            <div className="px-3 burger-button">
+                <BurgerIcon/>
+            </div>
+        </nav>
       </header>
     );
 }

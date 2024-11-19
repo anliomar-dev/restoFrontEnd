@@ -1,6 +1,12 @@
-@media screen and (max-width: 1200px) {
-    .navbar-menu{
+.burger-button{
+    display: none;
+}
+@media screen and (max-width: 990px) {
+    .navbar-menu, .navbar-reservation{
         display: none;
+    }
+    .burger-button{
+        display: block;
     }
 }
 
