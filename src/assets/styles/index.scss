@@ -56,17 +56,29 @@ $nav-font: "Inter",  sans-serif;
   font-size: 64px;
 }
 
-/*----------------*/
-/*---Menu section*/
-/*-----------------*/
-
+/*----------------------------------------*/
+/*------------Menu section----------------*/
+/*----------------------------------------*/
 .menu-buttons button.menu-btn-active{
   border-bottom: 3px solid $accent;
   color: $accent;
 }
 
-/* images */
+/*menu for small screen*/
+.MenuSmallScreen{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: small-screen-menu-anim 0.4s ease-out forwards;
+}
 
+@keyframes small-screen-menu-anim {
+  to{
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+/* images */
 // Animation pour les images du menu
 @for $i from 1 through 3 {
   .img-menu-#{$i} {
@@ -76,7 +88,7 @@ $nav-font: "Inter",  sans-serif;
   }
 }
 
-// Animation pour le corps du plat (dish body)
+// Animation (dish body)
 @for $i from 1 through 3 {
   .dish-body-#{$i} {
     transform: translateY(40px) scale(0.9);
@@ -85,7 +97,7 @@ $nav-font: "Inter",  sans-serif;
   }
 }
 
-// Animation pour les images du menu
+// Animation for dishes images in menu section
 @keyframes menu-images-animation {
   to {
     opacity: 1;
@@ -93,12 +105,14 @@ $nav-font: "Inter",  sans-serif;
   }
 }
 
-// Animation pour le corps du plat
+// Animation for dish body( price, ingredients ...)
 @keyframes dish-body-animation {
   to {
     opacity: 1;
     transform: initial;
   }
 }
-
+/*----------------------------------------*/
+/*------------ end Menu section----------------*/
+/*----------------------------------------*/
 

@@ -1,8 +1,8 @@
-function BurgerIcon() {
+function BurgerIcon({onChange}) {
 	return (
 	  <label className="btn btn-circle swap swap-rotate">
 		  {/* this hidden checkbox controls the state */}
-		  <input type="checkbox"/>
+		  <input type="checkbox" onChange={onChange} />
 
 		  {/* hamburger icon */}
 		  <svg
