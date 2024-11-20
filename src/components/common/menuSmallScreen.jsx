@@ -3,8 +3,13 @@ import CallToActionBtn from "./callToActionBtn.jsx";
 
 function MenuSmallScreen(){
 	return (
-	  <div className="MenuSmallScreen fixed top-20 left-0 p-10 w-full h-full">
-		  <nav className="h-96 flex flex-col gap-y-6 py-5 bg-blue-300 ps-10">
+	  <div className="MenuSmallScreen fixed top-20 left-0 py-6 px-5 w-full h-full z-50">
+		  <nav
+		    className="h-[calc(100%-90px)]
+		    flex flex-col gap-y-6 py-5 ps-10 rounded-lg
+		    shadow-lg bg-white
+		    "
+		  >
 			  <ul className="flex flex-col">
 				  <li className="mx-2 py-3 px-3"><a href="/#Home">Acceuil</a></li>
 				  <li className="mx-2 py-2 px-3"><a href="/#about-section">Apropos</a></li>

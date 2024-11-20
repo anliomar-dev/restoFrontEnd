@@ -49,6 +49,12 @@ function Navbar() {
             <MenuSmallScreen />,
             document.body
           )}
+          {createPortal(
+            <div className="fixed top-20 left-0 overlay w-full h-full bg-neutral-800 opacity-70 z-40">
+                <h1></h1>
+            </div>,
+            document.body
+          )}
       </header>
     );
 }
