@@ -8,7 +8,7 @@ const menuButtons = ["starter", "breakfast", "lunch", "dinner", "dessert"];
 
 function MenuSection() {
 	// Use useFetch hook to get data
-	const { loading, error, dishes, setCategory, category } =
+	const { loading, error, dishes, setCategory, category, page, setPage } =
 	  useFetchDishesByCategory("starter");
 
 	//handle the state of active button
@@ -32,6 +32,8 @@ function MenuSection() {
 					  activeBtn={activeBtn}
 					  setCategory={setCategory} // Passes setCategory to update the category
 					  setActiveBtn={setActiveBtn} // Passes setActiveBtn to manage the active button state
+					  page={page}
+					  resetDefaultPage={setPage}
 					>
 						{menuButton.charAt(0).toUpperCase() + menuButton.slice(1)}
 					</MenuButton>

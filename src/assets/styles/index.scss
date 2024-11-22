@@ -84,7 +84,7 @@ $nav-font: "Inter",  sans-serif;
   .img-menu-#{$i} {
     transform: translateY(40px) scale(0.9);
     opacity: 0;
-    animation: menu-images-animation 0.5s ease-in-out 0.3s + ($i * 0.1s) forwards;
+    animation: menu-images-animation 0.5s ease-in-out 0.2s + ($i * 0.1s) forwards;
   }
 }
 
