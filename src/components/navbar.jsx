@@ -25,6 +25,21 @@ function Navbar() {
         setMenuIsOpen(!menuIsOpen);
     }
 
+	useEffect(() => {
+		const checkScreenSize = () => {
+			if(window.innerWidth >= 990 && menuIsOpen) {
+				setMenuIsOpen(false);
+			}
+		};
+
+		checkScreenSize();
+		window.addEventListener("resize", checkScreenSize);
+
+		return () => {
+			window.removeEventListener("resize", checkScreenSize);
+		};
+	}, [menuIsOpen]);
+
     return (
       <header className="sticky top-0">
         <nav className="navbar bg-background d-flex justify-around align-items-center py-5">
@@ -37,7 +52,7 @@ function Navbar() {
               <li className="mx-2 py-2 px-3"><a href="/#menu">Menu</a></li>
               <li className="mx-2 py-2 px-3"><a href="/#gallery">Gallerie</a></li>
               <li className="mx-2 py-2 px-3 dropdown dropdown-hover pe-2">
-                  <DropdownCategoriesDishes onclick={} />
+                  <DropdownCategoriesDishes onclick={handleShowMenu}/>
               </li>
               <li className="mx-2 py-2 px-3"><a href="/#contact">Contact</a></li>
           </ul>
@@ -48,13 +63,13 @@ function Navbar() {
                   className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn"/>
             </div>
             <div className="px-3 burger-button">
-                <BurgerIcon onChange={handleShowMenu}/>
+                <BurgerIcon onChange={handleShowMenu} isMenuOpen={menuIsOpen} />
             </div>
         </nav>
           {menuIsOpen && (
             <>
                 {createPortal(
-                  <MenuSmallScreen />,
+                  <MenuSmallScreen onClick={handleShowMenu} />,
                   document.body
                 )}
                 {createPortal(
