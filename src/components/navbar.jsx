@@ -25,13 +25,13 @@ function Navbar() {
         setMenuIsOpen(!menuIsOpen);
     }
 
+	{/*hide the menu when the window is enlarged*/}
 	useEffect(() => {
 		const checkScreenSize = () => {
 			if(window.innerWidth >= 990 && menuIsOpen) {
 				setMenuIsOpen(false);
 			}
 		};
-
 		checkScreenSize();
 		window.addEventListener("resize", checkScreenSize);
 
@@ -52,6 +52,7 @@ function Navbar() {
               <li className="mx-2 py-2 px-3"><a href="/#menu">Menu</a></li>
               <li className="mx-2 py-2 px-3"><a href="/#gallery">Gallerie</a></li>
               <li className="mx-2 py-2 px-3 dropdown dropdown-hover pe-2">
+	              {/*display links for all catégories(starters, lunch, dinner ...)*/}
                   <DropdownCategoriesDishes onclick={handleShowMenu}/>
               </li>
               <li className="mx-2 py-2 px-3"><a href="/#contact">Contact</a></li>
@@ -62,6 +63,7 @@ function Navbar() {
                   text="Réserver une table"
                   className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn"/>
             </div>
+	        {/*button to open and close menu in small screen*/}
             <div className="px-3 burger-button">
                 <BurgerIcon onChange={handleShowMenu} isMenuOpen={menuIsOpen} />
             </div>
@@ -72,6 +74,7 @@ function Navbar() {
                   <MenuSmallScreen onClick={handleShowMenu} />,
                   document.body
                 )}
+	            {/*overlay while menu is display in small screen*/}
                 {createPortal(
                   <div className="fixed top-20 left-0 overlay w-full h-full bg-neutral-800 opacity-70 z-40">
                       <h1></h1>

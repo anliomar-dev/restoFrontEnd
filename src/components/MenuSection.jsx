@@ -30,8 +30,8 @@ function MenuSection() {
 					<MenuButton
 					  btnName={menuButton}
 					  activeBtn={activeBtn}
-					  setCategory={setCategory} // Passe setCategory pour mettre à jour la catégorie
-					  setActiveBtn={setActiveBtn} // Passe setActiveBtn pour gérer l'état actif du bouton
+					  setCategory={setCategory} // Passes setCategory to update the category
+					  setActiveBtn={setActiveBtn} // Passes setActiveBtn to manage the active button state
 					>
 						{menuButton.charAt(0).toUpperCase() + menuButton.slice(1)}
 					</MenuButton>
@@ -67,6 +67,7 @@ function MenuSection() {
 			  )}
 		  </div>
 		  <div className="flex pt-2">
+			  {/*button that redirect to the category page to see all the dishes of the category*/}
 			  <CallToActionBtn
 			    isBtn={true}
 			    className="bg-accent hover:bg-accentHover
