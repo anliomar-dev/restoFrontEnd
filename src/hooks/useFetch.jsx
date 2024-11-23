@@ -10,7 +10,8 @@ function useFetchDishesByCategory(initialCategory, defaulPpage=1) {
 	useEffect(() => {
 		const fetchDishes = async () => {
 			try {
-				const res = await fetch(`http://localhost:8000/dishes/?category=${category}&page=${page}`);
+				const res = await fetch(
+				  `https://omaranli.alwaysdata.net/dishes/?category=${category}&page=${page}`);
 				if (!res.ok) {
 					throw new Error(`Error fetching dishes for category ${category}`);
 				}
