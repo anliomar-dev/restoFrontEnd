@@ -6,6 +6,7 @@ import Starter from "./pages/starter.jsx";
 import Breakfast from "./pages/Breakfast";  // Corriger le chemin
 import Dinner from "./pages/Dinner";
 import Dessert from "./pages/dessert";
+import CategoryDishes from "./pages/dishes/categoryDishes.jsx";
 
 function App() {
     return (
@@ -14,10 +15,11 @@ function App() {
               <Route path="/" element={<Layout />}>
                   <Route index element={<Home />} />
                   <Route path="starter" element={<Starter />} />
-                  <Route path="breakfast" element={<Breakfast />} />  {/* Corriger le chemin */}
+                  <Route path="breakfast" element={<Breakfast />} />
                   <Route path="lunch" element={<Lunch />} />
                   <Route path="dinner" element={<Dinner />} />
                   <Route path="dessert" element={<Dessert />} />
+                  <Route path="dishes/:categoryName" element={<CategoryDishes />} />
               </Route>
           </Routes>
       </BrowserRouter>

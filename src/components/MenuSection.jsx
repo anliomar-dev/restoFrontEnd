@@ -62,7 +62,7 @@ function MenuSection() {
 					  <div className={`flex flex-col items-center w-full pt-3 dish-body-${index + 1}`}>
 						  <h2 className="text-2xl mb-1 pt-3">{dish.name}</h2>
 						  <p className="pb-2 font-defaultFont text-gray-400 text-center">{dish.ingredients}</p>
-						  <p className="text-lg font-bold text-accentHover">{dish.price}</p>
+						  <p className="text-lg font-bold text-accentHover">{dish.price} <strong>€</strong></p>
 					  </div>
 				  </div>
 				))
@@ -79,7 +79,7 @@ function MenuSection() {
 			    mt-6 transition-colors duration-300
 			    "
 			  >
-				  <Link to={`/${category}`}>voir plus +</Link>
+				  <Link to={`/dishes/${category}`}>voir plus +</Link>
 			  </CallToActionBtn>
 		  </div>
 	  </section>
