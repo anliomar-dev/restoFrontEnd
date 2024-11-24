@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 
 function useFetchDishesByCategory(initialCategory, defaulPpage=1) {
 	const [category, setCategory] = useState(initialCategory);
@@ -6,6 +6,7 @@ function useFetchDishesByCategory(initialCategory, defaulPpage=1) {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 	const [dishes, setDishes] = useState([]);
+	const numberOfPagesRef = useRef(0);
 
 	useEffect(() => {
 		const fetchDishes = async () => {
@@ -16,8 +17,8 @@ function useFetchDishesByCategory(initialCategory, defaulPpage=1) {
 					throw new Error(`Error fetching dishes for category ${category}`);
 				}
 				const dishes = await res.json();
-				console.log(dishes);
 				setDishes(dishes);
+				numberOfPagesRef.current = Math.ceil(dishes.count / dishes.results.length);
 			} catch (e) {
 				setError(e.toString());
 			} finally {
@@ -27,7 +28,7 @@ function useFetchDishesByCategory(initialCategory, defaulPpage=1) {
 		fetchDishes();
 	}, [category, page]);
 
-	return { loading, error, dishes, setCategory, category, page, setPage };
+	return { loading, error, dishes, setCategory, category, page, setPage, numberOfPagesRef };
 }
 
 export default useFetchDishesByCategory;

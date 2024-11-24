@@ -49,11 +49,13 @@ function MenuSection() {
 		  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 gap-x-8">
 			  {/* display dishes by category */}
 			  {loading ? (
-				<p>Loading...</p>
+			    <div className="">
+				    <p className="text-lg font-bold">Loading ...</p>
+			    </div>
 			  ) : error ? (
-				<p>{error}</p>
+			    <p>{error}</p>
 			  ) : (
-				dishes.results.slice(0, 3).map((dish, index) => (
+			    dishes.results.slice(0, 3).map((dish, index) => (
 				  <div key={dish.id} className="flex flex-col items-center max-w-96">
 					  <div className={`relative w-full img-menu-${index + 1}`} style={{paddingTop: '56.25%'}}> {/* Aspect ratio 16:9 */}
 						  <img className="absolute top-0 left-0 w-full h-full object-cover rounded-md mb-4"
