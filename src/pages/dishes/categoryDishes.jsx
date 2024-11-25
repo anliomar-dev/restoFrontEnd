@@ -11,7 +11,8 @@ function CategoryDishes (){
 	useEffect(() => {
 		setCategory(categoryName);
 		setPage(1);
-	}, [categoryName]);
+
+	}, [categoryName, setPage, setCategory]);
 	const nextPage = () => {
 		if(page < numberOfPagesRef.current) {
 			setPage( page + 1);

@@ -18,7 +18,9 @@ function useFetchDishesByCategory(initialCategory, defaulPpage=1) {
 				}
 				const dishes = await res.json();
 				setDishes(dishes);
-				numberOfPagesRef.current = Math.ceil(dishes.count / dishes.results.length);
+				if (page === 1) {
+					numberOfPagesRef.current = Math.ceil(dishes.count / dishes.results.length);
+				}
 			} catch (e) {
 				setError(e.toString());
 			} finally {
