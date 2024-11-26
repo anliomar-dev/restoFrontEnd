@@ -19,7 +19,10 @@ function HeroSection(){
 	    id="Home"
 	  >
 		  <div className="hero-body max-w-lg mx-10">
-			  <h1 className="hero-title font-headingFont font-bold text-headingTitle leading-tight">
+			  <h1 className="
+			  hero-title font-headingFont font-bold
+			  text-headingTitle leading-tight"
+			  >
 				  Profitez d&#39;une nourriture délicieuse et saine
 			  </h1>
 			  <p className="font-defaultFont text-muted text-lg mt-3">
