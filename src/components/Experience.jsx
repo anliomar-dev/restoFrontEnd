@@ -2,6 +2,8 @@ import experiencesData from "../experiencesData.jsx";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.jsx";
 import {motion } from "framer-motion"
+
+
 /**
  * learn more button is used on experience section it return a component
  * <CalltoactionButton> and his children (a text and a svg icon)
@@ -58,7 +60,8 @@ function LearnMoreButton(){
  */
 function ExperienceCard(props){
 	return (
-	  <div className="flex flex-col gap-6 justify-center items-center w-full bg-white py-10 px-10">
+	  <motion.div className="flex flex-col gap-6 justify-center items-center w-full bg-white py-10 px-10"
+	  >
 		  <div className="p-4 rounded-full bg-red-50">
 			  {props.icon}
 		  </div>
@@ -66,7 +69,7 @@ function ExperienceCard(props){
 		  <p className="font-defaultFont">
 			  {props.text}
 		  </p>
-	  </div>
+	  </motion.div>
 	)
 }
 
@@ -101,11 +104,11 @@ function ExperienceSection() {
 				  <LearnMoreButton />
 			  </div>
 		  </motion.div>
-		  <div className="flex flex-col w1200:flex-row justify-center gap-6">
+		  <motion.div className="flex flex-col w1200:flex-row justify-center gap-6">
 			  {experiencesData.map((experience, index) => (
 				<ExperienceCard key={index} {...experience} />
 			  ))}
-		  </div>
+		  </motion.div>
 	  </section>
 	);
 }
