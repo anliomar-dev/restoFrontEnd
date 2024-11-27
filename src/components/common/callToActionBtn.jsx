@@ -1,3 +1,5 @@
+import {motion} from "framer-motion";
+
 /**
  * return button if isBtn prop is true, else <a></a>
  * both have the same style
@@ -8,13 +10,19 @@
 function CallToActionBtn(props) {
 	return (
 	  props.isBtn ? (
-		<button type={props.type} className={`btn ${props.className}`}>
+		<motion.button
+		  type={props.type}
+		  className={`btn ${props.className}`}
+		  whileHover={{scale: 1.1}}
+		>
 			{props.children}
-		</button>
+		</motion.button>
 	  ) : (
-		<a href={props.link} onClick={props.onClick} className={`btn ${props.className}`}>
+		<motion.a
+		  href={props.link}
+		  onClick={props.onClick} className={`btn ${props.className}`}>
 			{props.text}
-		</a>
+		</motion.a>
 	  )
 	);
 }

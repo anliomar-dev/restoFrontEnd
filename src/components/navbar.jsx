@@ -10,6 +10,7 @@ import MenuSmallScreen from "./common/menuSmallScreen.jsx";
 
 function Navbar() {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
+	// scroll to the section of the hash
     useEffect(() => {
         const hash = window.location.hash; // get the hash of the url
 
@@ -21,6 +22,7 @@ function Navbar() {
         }
     }, []);
 
+	// show or hide menu on small screen
     const handleShowMenu = () => {
         setMenuIsOpen(!menuIsOpen);
     }

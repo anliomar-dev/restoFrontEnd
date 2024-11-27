@@ -1,7 +1,6 @@
-import CallToActionBtn from "./common/callToActionBtn.jsx";
+import HeroTexts from './heroTexts.jsx';
 import heroImg from "../assets/images/heroImg.png";
 import {motion} from "framer-motion";
-
 // prop animate of the containers image of the hero section
 const heroImageContainerAnimate = {
 	scale: [1.1, 1.1, 1],
@@ -22,8 +21,8 @@ const heroImageTransition = {
 	duration: 3,
 	ease: "easeInOut",
 	repeat: Infinity,
-
 }
+
 
 /**
  * HeroSection component that displays the hero section of the homepage with a title,
@@ -43,24 +42,7 @@ function HeroSection(){
 	    "
 	    id="Home"
 	  >
-		  <div className="hero-body max-w-lg mx-10">
-			  <h1 className="
-			  hero-title font-headingFont font-bold
-			  text-headingTitle leading-tight"
-			  >
-				  Profitez d&#39;une nourriture délicieuse et saine
-			  </h1>
-			  <p className="font-defaultFont text-muted text-lg mt-3">
-				  Chez <strong>LE BANQUET</strong>,
-				  nous préparons des plats délicieux et sains avec des ingrédients frais et locaux.
-			  </p>
-			  <CallToActionBtn
-				isBtn={false} link="#reservation"
-				text="Réserver une table"
-				className="bg-accent hover:bg-accentHover
-				text-white rounded-3xl btn-md reservation-btn mt-6"
-			  />
-		  </div>
+		    <HeroTexts />
 		  <div className="hero-img-container max-w-lg max-h-lg mx-10">
 			  <motion.div
 			    className="box w-auto h-auto"
