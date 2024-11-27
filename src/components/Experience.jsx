@@ -1,6 +1,7 @@
 import experiencesData from "../experiencesData.jsx";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
-
+import useIntersectionObserver from "../hooks/useIntersectionObserver.jsx";
+import {motion } from "framer-motion"
 /**
  * learn more button is used on experience section it return a component
  * <CalltoactionButton> and his children (a text and a svg icon)
@@ -79,9 +80,17 @@ function ExperienceCard(props){
  * <ExperienceSection />
  */
 function ExperienceSection() {
+	const  [inObserver, ref] = useIntersectionObserver();
 	return (
 	  <section className="bg-secondaryBackground flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 py-16 px-8 md:px-28" id="experience-section">
-		  <div className="bg-accentHover w-auto md-w-2/5 max-h-[370px] py-8 px-6 flex flex-col justify-center">
+		  <motion.div className="
+		    bg-accentHover w-auto md-w-2/5 max-h-[370px]
+		    py-8 px-6 flex flex-col justify-center"
+		       initial={{ opacity: 0, y: 50 }}
+		       animate={{ opacity: inObserver ? 1 : 0, y: inObserver ? 0 : 100 }}
+		       transition={{ duration: 1 }}
+		              ref={ref}
+		  >
 			  <h3 className="text-white text-3xl font-bold font-defaultFont mb-7">Pourquoi Nous Choisir</h3>
 			  <p className="text-white text-base">
 				  Chez le banquet, chaque repas est une découverte culinaire,
@@ -91,7 +100,7 @@ function ExperienceSection() {
 			  <div className="flex justify-center">
 				  <LearnMoreButton />
 			  </div>
-		  </div>
+		  </motion.div>
 		  <div className="flex flex-col w1200:flex-row justify-center gap-6">
 			  {experiencesData.map((experience, index) => (
 				<ExperienceCard key={index} {...experience} />
