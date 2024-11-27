@@ -18,19 +18,23 @@ const itemVariants = {
 
 function HeroTexts() {
 	return (
+	  // main container
 	  <motion.div className="hero-body max-w-lg mx-10"
-	              initial="hidden"
-	              animate="visible"
-	              variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
 	  >
 		  <motion.h1 className="
 			  hero-title font-headingFont font-bold
 			  text-headingTitle leading-tight"
-		             variants={itemVariants}
+		      variants={itemVariants}
 		  >
 			  Profitez d&#39;une nourriture délicieuse et saine
 		  </motion.h1>
-		  <motion.p className="font-defaultFont text-muted text-lg mt-3" variants={itemVariants}>
+		  <motion.p className="
+		        font-defaultFont text-muted text-lg mt-3"
+		        variants={itemVariants}
+		  >
 			  Chez <strong>LE BANQUET</strong>,
 			  nous préparons des plats délicieux et sains avec des ingrédients frais et locaux.
 		  </motion.p>
