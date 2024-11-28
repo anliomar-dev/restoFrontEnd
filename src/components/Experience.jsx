@@ -3,6 +3,27 @@ import CallToActionBtn from "./common/callToActionBtn.jsx";
 import useIntersectionObserver from "../hooks/useIntersectionObserver.jsx";
 import {motion } from "framer-motion"
 
+// Variants for the container to stagger child animations
+const containerVariants = {
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.3,
+		},
+	},
+	hidden: { opacity: 0 },
+}
+
+// Individual item animation (fading in and sliding up)
+const item = {
+	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+	hidden: { opacity: 0, y: 100,},
+}
+
+const variantsSoloElement = {
+	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+	hidden: { opacity: 0, y: 80 },
+}
 
 /**
  * learn more button is used on experience section it return a component
@@ -61,6 +82,7 @@ function LearnMoreButton(){
 function ExperienceCard(props){
 	return (
 	  <motion.div className="flex flex-col gap-6 justify-center items-center w-full bg-white py-10 px-10"
+          variants={item}
 	  >
 		  <div className="p-4 rounded-full bg-red-50">
 			  {props.icon}
@@ -83,28 +105,36 @@ function ExperienceCard(props){
  * <ExperienceSection />
  */
 function ExperienceSection() {
-	const  [inObserver, ref] = useIntersectionObserver();
+
 	return (
 	  <section className="bg-secondaryBackground flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 py-16 px-8 md:px-28" id="experience-section">
 		  <motion.div className="
 		    bg-accentHover w-auto md-w-2/5 max-h-[370px]
 		    py-8 px-6 flex flex-col justify-center"
-		       initial={{ opacity: 0, y: 50 }}
-		       animate={{ opacity: inObserver ? 1 : 0, y: inObserver ? 0 : 100 }}
-		       transition={{ duration: 1 }}
-		              ref={ref}
+              initial="hidden"
+              whileInView="visible"
+              variants={containerVariants}
+              viewport={{ once: true, amount: 0.3 }}
+
 		  >
-			  <h3 className="text-white text-3xl font-bold font-defaultFont mb-7">Pourquoi Nous Choisir</h3>
-			  <p className="text-white text-base">
+			  <motion.h3 className="text-white text-3xl font-bold font-defaultFont mb-7" variants={item}>
+				  Pourquoi Nous Choisir
+			  </motion.h3>
+			  <motion.p className="text-white text-base" variants={item}>
 				  Chez le banquet, chaque repas est une découverte culinaire,
 				  créée avec soin par nos chefs. Profitez d&#39;une ambiance conviviale et
 				  de saveurs authentiques dans chaque plat.
-			  </p>
-			  <div className="flex justify-center">
+			  </motion.p>
+			  <motion.div className="flex justify-center" variants={item}>
 				  <LearnMoreButton />
-			  </div>
+			  </motion.div>
 		  </motion.div>
-		  <motion.div className="flex flex-col w1200:flex-row justify-center gap-6">
+		  <motion.div className="flex flex-col w1200:flex-row justify-center gap-6"
+	          initial="hidden"
+	          whileInView="visible"
+	          variants={containerVariants}
+	          viewport={{ once: true, amount: 0.3 }}
+		  >
 			  {experiencesData.map((experience, index) => (
 				<ExperienceCard key={index} {...experience} />
 			  ))}
