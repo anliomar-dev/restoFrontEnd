@@ -8,7 +8,8 @@ import gallery2 from "../assets/images/gallery2.webp";
 import gallery3 from "../assets/images/gallery3.webp";
 import gallery4 from "../assets/images/gallery4.webp";
 import gallery5 from "../assets/images/gallery5.webp";
-
+import {motion} from "framer-motion";
+import {variantsSoloElement} from "../utils.js";
 
 // Array of images for the slider
 const images = [
@@ -87,7 +88,12 @@ const GallerySlider = () => {
 	}, [])
 
 	return (
-	  <div className="slider" ref={sliderRef}>
+	  <motion.div className="slider" ref={sliderRef}
+          initial="hidden"
+          whileInView="visible"
+          variants={variantsSoloElement}
+          viewport={{ once: true, amount: 0.3 }}
+	  >
 		  <div
 			className="slider-track"
 			style={{
@@ -114,7 +120,7 @@ const GallerySlider = () => {
 
 		  {/* Pagination dots */}
 		  <PaginationBullet currentIndex={currentIndex} />
-	  </div>
+	  </motion.div>
 	);
 };
 
