@@ -5,28 +5,7 @@ import imgCarouselAbout1 from '../assets/images/imgCarouselAbout1.jpg'
 import imgCarouselAbout3 from '../assets/images/imgCarouselAbout3.jpg'
 import imgCarouselAbout4 from '../assets/images/imgCarouselAbout4.webp'
 import {motion} from 'framer-motion'
-
-// Variants for the container to stagger child animations
-const containerVariants = {
-	visible: {
-		opacity: 1,
-		transition: {
-			staggerChildren: 0.3,
-		},
-	},
-	hidden: { opacity: 0 },
-}
-
-// Individual item animation (fading in and sliding up)
-const item = {
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-	hidden: { opacity: 0, y: 100,},
-}
-
-const variantsSoloElement = {
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-	hidden: { opacity: 0, y: 80 },
-}
+import {containerVariants, variantsSoloElement, item} from "../utils.js";
 
 
 /**

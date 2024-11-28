@@ -5,29 +5,10 @@ import {Link} from "react-router-dom";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
 import {motion } from "framer-motion"
 import DisheCardHome from "./dishes/disheCardHome";
+import {containerVariants, variantsSoloElement, item} from "../utils.js";
 
 const menuButtons = ["starter", "breakfast", "lunch", "dinner", "dessert"];
-// Variants for the container to stagger child animations
-const containerVariants = {
-	visible: {
-		opacity: 1,
-		transition: {
-			staggerChildren: 0.3,
-		},
-	},
-	hidden: { opacity: 0 },
-}
 
-// Individual item animation (fading in and sliding up)
-const item = {
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-	hidden: { opacity: 0, y: 100,},
-}
-
-const variantsSoloElement = {
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-	hidden: { opacity: 0, y: 80 },
-}
 
 function MenuSection() {
 	// Use useFetch hook to get data
@@ -41,6 +22,7 @@ function MenuSection() {
 	    className="menu-section pt-14 flex flex-col items-center px-8 md:px-28"
 	    id="menu"
 	  >
+		  {/* menu section header */}
 		  <motion.div className="flex flex-col items-center"
 	          initial="hidden"
 	          whileInView="visible"
@@ -53,6 +35,7 @@ function MenuSection() {
 					  <span className="text-accentHover">Nos Menus</span>
 				  </p>
 			  </motion.div>
+			  {/* menu section nav */}
 			  <motion.ul className="flex justify-center gap-6 flex-wrap menu-buttons" variants={item}>
 				  {menuButtons.map((menuButton) => (
 				    <li key={menuButton}>
@@ -70,6 +53,7 @@ function MenuSection() {
 				  ))}
 			  </motion.ul>
 		  </motion.div>
+		  {/* menu section current menu (category ) */}
 		  <motion.div className="py-8 flex flex-col items-center"
               initial="hidden"
               whileInView="visible"
@@ -81,8 +65,8 @@ function MenuSection() {
 				  {category.charAt(0).toUpperCase() + category.slice(1)}
 			  </p>
 		  </motion.div>
+		  {/* menu section dishes */}
 		  <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 gap-x-8"
-
 		  >
 			  {/* display dishes by category */}
 			  {loading ? (

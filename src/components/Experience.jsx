@@ -1,24 +1,7 @@
 import experiencesData from "../experiencesData.jsx";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
 import {motion } from "framer-motion"
-
-// Variants for the container to stagger child animations
-const containerVariants = {
-	visible: {
-		opacity: 1,
-		transition: {
-			staggerChildren: 0.3,
-		},
-	},
-	hidden: { opacity: 0 },
-}
-
-// Individual item animation (fading in and sliding up)
-const item = {
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-	hidden: { opacity: 0, y: 100,},
-}
-
+import {containerVariants, item} from "../utils.js";
 
 /**
  * learn more button is used on experience section it return a component

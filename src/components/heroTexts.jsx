@@ -1,14 +1,6 @@
 import {motion} from "framer-motion";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
-
-// Variants for main container
-const containerVariants = {
-	visible: {
-		transition: {
-			staggerChildren: 0.5,
-		},
-	},
-};
+import {containerVariants} from "../utils.js";
 
 // Variants for elements h1, p and button
 const itemVariants = {
