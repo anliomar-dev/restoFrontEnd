@@ -14,7 +14,7 @@ function ContactForm() {
 	return (
 	  <motion.form action="" className="w-full shadow-lg border-2 shadow-zinc-200 bg-white p-10"
 	       initial="hidden"
-	       animate="visible"
+	       whileInView="visible"
 	       variants={variantsSoloElement}
 	       viewport={{once: true, amount: 0.3}}
 	  >
