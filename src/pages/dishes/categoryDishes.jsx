@@ -2,12 +2,19 @@ import { useParams } from 'react-router-dom';
 import DisheCard from "../../components/dishes/disheCard.jsx";
 import useFetchDishesByCategory from "../../hooks/useFetch.jsx";
 import {useEffect} from "react";
+
+/**
+ * display all the dishes by category with pagination
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function CategoryDishes (){
 	const {categoryName} = useParams();
 	const { loading, error, dishes,
 	    setCategory,
 		page, setPage, numberOfPagesRef
 	} = useFetchDishesByCategory(categoryName);
+
 	useEffect(() => {
 		setCategory(categoryName);
 		setPage(1);
