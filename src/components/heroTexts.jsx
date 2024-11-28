@@ -12,8 +12,8 @@ const containerVariants = {
 
 // Variants for elements h1, p and button
 const itemVariants = {
-	hidden: { opacity: 0, y: 20 }, // Début : caché et décalé vers le bas
-	visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }, // Transition : apparait en montant
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 function HeroTexts() {

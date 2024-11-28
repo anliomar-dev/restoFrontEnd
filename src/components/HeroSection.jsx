@@ -3,7 +3,7 @@ import heroImg from "../assets/images/heroImg.png";
 import {motion} from "framer-motion";
 // prop animate of the containers image of the hero section
 const heroImageContainerAnimate = {
-	scale: [1.1, 1.1, 1],
+	scale: [1.08, 1.08, 1],
 	rotate: [360, 360, 0],
     borderRadius: ["0%", "0%", "50%", "50%", "0%"]
 }
