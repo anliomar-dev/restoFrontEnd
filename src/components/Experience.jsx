@@ -1,6 +1,5 @@
 import experiencesData from "../experiencesData.jsx";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
-import useIntersectionObserver from "../hooks/useIntersectionObserver.jsx";
 import {motion } from "framer-motion"
 
 // Variants for the container to stagger child animations
@@ -20,10 +19,6 @@ const item = {
 	hidden: { opacity: 0, y: 100,},
 }
 
-const variantsSoloElement = {
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-	hidden: { opacity: 0, y: 80 },
-}
 
 /**
  * learn more button is used on experience section it return a component
@@ -111,10 +106,10 @@ function ExperienceSection() {
 		  <motion.div className="
 		    bg-accentHover w-auto md-w-2/5 max-h-[370px]
 		    py-8 px-6 flex flex-col justify-center"
-              initial="hidden"
-              whileInView="visible"
-              variants={containerVariants}
-              viewport={{ once: true, amount: 0.3 }}
+	        initial="hidden"
+	        whileInView="visible"
+	        variants={containerVariants}
+	        viewport={{ once: true, amount: 0.3 }}
 
 		  >
 			  <motion.h3 className="text-white text-3xl font-bold font-defaultFont mb-7" variants={item}>
