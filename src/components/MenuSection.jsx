@@ -4,6 +4,7 @@ import MenuButton from "./forms/menuButton";
 import {Link} from "react-router-dom";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
 import {motion } from "framer-motion"
+import DisheCardHome from "./dishes/disheCardHome";
 
 const menuButtons = ["starter", "breakfast", "lunch", "dinner", "dessert"];
 // Variants for the container to stagger child animations
@@ -80,7 +81,9 @@ function MenuSection() {
 				  {category.charAt(0).toUpperCase() + category.slice(1)}
 			  </p>
 		  </motion.div>
-		  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 gap-x-8">
+		  <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 gap-x-8"
+
+		  >
 			  {/* display dishes by category */}
 			  {loading ? (
 			    <div className="">
@@ -90,21 +93,14 @@ function MenuSection() {
 			    <p>{error}</p>
 			  ) : (
 			    dishes.results.slice(0, 3).map((dish, index) => (
-				  <div key={dish.id} className="flex flex-col items-center max-w-96">
-					  <div className={`relative w-full img-menu-${index + 1}`}
-					       style={{paddingTop: '56.25%'}}> {/* Aspect ratio 16:9 */}
-						  <img className="absolute top-0 left-0 w-full h-full object-cover rounded-md mb-4"
-						       src={dish.image} alt={dish.name}/>
-					  </div>
-					  <div className={`flex flex-col items-center w-full pt-3 dish-body-${index + 1}`}>
-						  <h2 className="text-2xl mb-1 pt-3">{dish.name}</h2>
-						  <p className="pb-2 font-defaultFont text-gray-400 text-center">{dish.ingredients}</p>
-						  <p className="text-lg font-bold text-accentHover">{dish.price} <strong>€</strong></p>
-					  </div>
-				  </div>
+			      <DisheCardHome
+			        key={dish.id} name={dish.name} index={index + 1}
+	                price={dish.price} ingredients={dish.ingredients}
+	                image={dish.image}
+			      />
 				))
 			  )}
-		  </div>
+		  </motion.div>
 		  <div className="flex pt-2">
 			  {/*button that redirect to the category page to see all the dishes of the category*/}
 			  <CallToActionBtn

@@ -1,4 +1,4 @@
-function DisheCard(props) {
+function DisheCardHome(props) {
 	return (
 	  <div className="card lg:card-side bg-base-100 shadow-xl border-2">
 		  <figure className="w-full" >
@@ -19,4 +19,4 @@ function DisheCard(props) {
 	)
 }
 
-export default DisheCard;
+export default DisheCardHome;
