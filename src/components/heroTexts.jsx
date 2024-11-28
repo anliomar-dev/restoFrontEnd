@@ -18,7 +18,7 @@ function HeroTexts() {
 	  >
 		  <motion.h1 className="
 			  hero-title font-headingFont font-bold
-			  text-headingTitle leading-tight"
+			  text-headingTitle leading-tight text-5xl md:text-6xl"
 		      variants={itemVariants}
 		  >
 			  Profitez d&#39;une nourriture délicieuse et saine

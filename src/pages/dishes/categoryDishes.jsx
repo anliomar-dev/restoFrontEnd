@@ -43,8 +43,12 @@ function CategoryDishes (){
 			  ) : error ? (
 			    <p>{error}</p>
 			  ) : (
-				dishes.results.map((dish) => (
-				  <DisheCard key={dish.id} disheName={dish.name} ingredients={dish.ingredients} src={dish.image}/>
+				dishes.results.map((dish, index) => (
+				  <DisheCard
+				    key={dish.id} disheName={dish.name}
+				    ingredients={dish.ingredients}
+				    src={dish.image} index={index+1}
+				  />
 				))
 			  )}
 		  </div>

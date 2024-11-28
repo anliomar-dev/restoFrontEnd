@@ -123,14 +123,14 @@ function ContactSection() {
 	return (
 	  <motion.section className="px-8 md:px-28 mt-4 mb-16" id="contact"
 	  >
-		  <motion.h1 className="mt-5 flex justify-center
-		     py-14 font-headingFont font-bold text-headingTitle text-5xl"
+		  <motion.h1 className="mt-5 flex justify-center items-center flex-wrap
+		     py-14 font-headingFont font-bold text-headingTitle text-3xl md:text-5xl"
              initial="hidden"
              whileInView="visible"
              variants={variantsSoloElement}
              viewport={{ once: true, amount: 0.3 }}
 		  >
-			  <span className="text-accentHover">Contactez nous </span> pour plus d&#39;informations
+			  <span className="text-accentHover">Contactez nous </span> <span>pour plus d&#39;informations</span>
 		  </motion.h1>
 		  <MapLocation/>
 		  <ContactInfos/>

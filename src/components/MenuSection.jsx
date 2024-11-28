@@ -30,7 +30,7 @@ function MenuSection() {
 	          viewport={{ once: true, amount: 0.3 }}
 		  >
 			  <motion.div className="pb-12 flex flex-col items-center" variants={item}>
-				  <p className="text-6xl font-headingFont font-bold text-headingTitle mt-3">
+				  <p className="text-4xl md:text-6xl font-headingFont font-bold text-headingTitle mt-3">
 					  <span>Decouvrez</span>
 					  <span className="text-accentHover">Nos Menus</span>
 				  </p>

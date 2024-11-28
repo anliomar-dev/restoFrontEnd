@@ -19,21 +19,21 @@ function MenuSmallScreen({ onClick}) {
 					  <a href="/#gallery" onClick={onClick}>Galerie</a>
 				  </li>
 				  <li className="mx-2 py-2 px-3 dropdown dropdown-hover pe-2">
-					  <DropdownCategoriesDishes onclick={onClick} />
+					  <DropdownCategoriesDishes onclick={onClick}/>
 				  </li>
 				  <li className="mx-2 py-2 px-3">
 					  <a href="/#contact" onClick={onClick}>Contact</a>
 				  </li>
+				  <li>
+					  <CallToActionBtn
+					    isBtn={false}
+					    link="#reservation"
+					    text="Réserver une table"
+					    onClick={onClick}
+					    className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn"
+					  />
+				  </li>
 			  </ul>
-			  <div>
-				  <CallToActionBtn
-					isBtn={false}
-					link="#reservation"
-					text="Réserver une table"
-					onClick={onClick}
-					className="bg-accent text-white hover:bg-accentHover rounded-2xl btn-sm reservation-btn"
-				  />
-			  </div>
 		  </nav>
 	  </div>
 	);

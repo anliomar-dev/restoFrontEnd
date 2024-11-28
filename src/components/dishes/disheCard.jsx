@@ -1,6 +1,6 @@
 function DisheCardHome(props) {
 	return (
-	  <div className="card lg:card-side bg-base-100 shadow-xl border-2">
+	  <div className={`card lg:card-side bg-base-100 shadow-xl border-2 card-${props.index}`}>
 		  <figure className="w-full" >
 			  <img
 			    className="h-[250px] w-full object-cover"

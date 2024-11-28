@@ -13,7 +13,7 @@ function BooktableSection() {
 		    variants={variantsSoloElement}
 		    viewport={{ once: true, amount: 0.5 }}
 		  >
-			  <h2 className="mb-16 font-headingFont font-bold text-headingTitle text-6xl">Réserver une table</h2>
+			  <h2 className="mb-16 font-headingFont font-bold text-headingTitle text-5xl md:text-6xl">Réserver une table</h2>
 		  </motion.div>
 		  <motion.div
 		    className="

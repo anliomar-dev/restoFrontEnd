@@ -52,9 +52,7 @@ $nav-font: "Inter",  sans-serif;
 }
 
 /*hero title*/
-.hero-title{
-  font-size: 64px;
-}
+
 
 /*----------------------------------------*/
 /*------------Menu section----------------*/
@@ -82,6 +80,14 @@ $nav-font: "Inter",  sans-serif;
 // Animation pour les images du menu
 @for $i from 1 through 3 {
   .img-menu-#{$i} {
+    transform: translateY(40px) scale(0.9);
+    opacity: 0;
+    animation: menu-images-animation 0.5s ease-in-out 0.2s + ($i * 0.1s) forwards;
+  }
+}
+
+@for $i from 1 through 4 {
+  .card-#{$i} {
     transform: translateY(40px) scale(0.9);
     opacity: 0;
     animation: menu-images-animation 0.5s ease-in-out 0.2s + ($i * 0.1s) forwards;
