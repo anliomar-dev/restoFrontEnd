@@ -1,6 +1,8 @@
 import Input from "./input.jsx";
 import Textarea from "./textarea.jsx";
 import CallToActionBtn from "../common/callToActionBtn.jsx";
+import {motion} from "framer-motion";
+import {variantsSoloElement} from "../../utils.js";
 
 
 /**
@@ -10,7 +12,12 @@ import CallToActionBtn from "../common/callToActionBtn.jsx";
  */
 function ContactForm() {
 	return (
-	  <form action="" className="w-full shadow-lg border-2 shadow-zinc-200 bg-white p-10">
+	  <motion.form action="" className="w-full shadow-lg border-2 shadow-zinc-200 bg-white p-10"
+	       initial="hidden"
+	       animate="visible"
+	       variants={variantsSoloElement}
+	       viewport={{once: true, amount: 0.3}}
+	  >
 		  <div className="fields flex w-full flex-col gap-6 justify-center">
 			  <div className="inputs w-full grid grid-cols-1 md:grid-cols-2 gap-6">
 				  <Input type="text" placeholder="Nom" className="col-span-1"/>
@@ -29,7 +36,7 @@ function ContactForm() {
 				  Envoyer
 			  </CallToActionBtn>
 		  </div>
-	  </form>
+	  </motion.form>
 	)
 }
 
