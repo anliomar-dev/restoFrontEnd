@@ -15,7 +15,8 @@ function Navbar() {
         const hash = window.location.hash; // get the hash of the url
 
         if (hash) {
-            const element = document.getElementById(hash.replace('#', ''));
+            const element = document.
+            getElementById(hash.replace('#', ''));
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
             }

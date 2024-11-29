@@ -1,7 +1,7 @@
 import experiencesData from "../experiencesData.jsx";
 import CallToActionBtn from "./common/callToActionBtn.jsx";
-import {motion } from "framer-motion"
-import {containerVariants, item} from "../utils.js";
+import { motion } from "framer-motion";
+import { containerVariants, item } from "../utils.js";
 
 /**
  * learn more button is used on experience section it return a component
@@ -9,36 +9,35 @@ import {containerVariants, item} from "../utils.js";
  *
  * @returns {JSX.Element}
  */
-function LearnMoreButton(){
-	return(
-	  <CallToActionBtn
-		isBtn={true}
-		className="bg-transparent hover:bg-white
-			    text-white hover:text-red-500 border-transparent
-			    backdrop-brightness-150
-			    rounded-3xl btn-md reservation-btn
-			    mt-6 transition-colors duration-300
-			    "
-	  >
-		  <span className=""> En savoir plus</span>
-		  <svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			strokeWidth="2"
-			strokeLinecap="round"
-			strokeLinejoin="round"
-			className="lucide lucide-chevron-right"
-		  >
-			  <path d="m9 18 6-6-6-6"/>
-		  </svg>
-	  </CallToActionBtn>
-	)
+function LearnMoreButton() {
+  return (
+    <CallToActionBtn
+      isBtn={true}
+      className="bg-transparent hover:bg-white
+			text-white hover:text-red-500 border-transparent
+			backdrop-brightness-150
+			rounded-3xl btn-md reservation-btn
+			mt-6 transition-colors duration-300
+			"
+    >
+      <span className=""> En savoir plus</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="lucide lucide-chevron-right"
+      >
+        <path d="m9 18 6-6-6-6" />
+      </svg>
+    </CallToActionBtn>
+  );
 }
-
 
 /**
  * ExperienceCard component that displays an icon, a title, and a descriptive text inside a styled card.
@@ -57,20 +56,17 @@ function LearnMoreButton(){
  *    text="This is a description of the experience."
  * />
  */
-function ExperienceCard(props){
-	return (
-	  <motion.div className="flex flex-col gap-6 justify-center items-center w-full bg-white py-10 px-10"
-          variants={item}
-	  >
-		  <div className="p-4 rounded-full bg-red-50">
-			  {props.icon}
-		  </div>
-		  <h4 className="text-xl font-bold text-center">{props.title}</h4>
-		  <p className="font-defaultFont">
-			  {props.text}
-		  </p>
-	  </motion.div>
-	)
+function ExperienceCard(props) {
+  return (
+    <motion.div
+      className="flex flex-col gap-6 justify-center items-center w-full bg-white py-10 px-10"
+      variants={item}
+    >
+      <div className="p-4 rounded-full bg-red-50">{props.icon}</div>
+      <h4 className="text-xl font-bold text-center">{props.title}</h4>
+      <p className="font-defaultFont">{props.text}</p>
+    </motion.div>
+  );
 }
 
 /**
@@ -83,43 +79,48 @@ function ExperienceCard(props){
  * <ExperienceSection />
  */
 function ExperienceSection() {
-
-	return (
-	  <section className="bg-secondaryBackground flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 py-16 px-8 md:px-28" id="experience-section">
-		  <motion.div className="
+  return (
+    <section
+      className="bg-secondaryBackground flex flex-col md:flex-row justify-center gap-x-6 gap-y-6 py-16 px-8 md:px-28"
+      id="experience-section"
+    >
+      <motion.div
+        className="
 		    bg-accentHover w-auto md-w-2/5 max-h-[370px]
 		    py-8 px-6 flex flex-col justify-center"
-	        initial="hidden"
-	        whileInView="visible"
-	        variants={containerVariants}
-	        viewport={{ once: true, amount: 0.3 }}
-
-		  >
-			  <motion.h3 className="text-white text-3xl font-bold font-defaultFont mb-7" variants={item}>
-				  Pourquoi Nous Choisir
-			  </motion.h3>
-			  <motion.p className="text-white text-base" variants={item}>
-				  Chez le banquet, chaque repas est une découverte culinaire,
-				  créée avec soin par nos chefs. Profitez d&#39;une ambiance conviviale et
-				  de saveurs authentiques dans chaque plat.
-			  </motion.p>
-			  <motion.div className="flex justify-center" variants={item}>
-				  <LearnMoreButton />
-			  </motion.div>
-		  </motion.div>
-		  <motion.div className="flex flex-col w1200:flex-row justify-center gap-6"
-	          initial="hidden"
-	          whileInView="visible"
-	          variants={containerVariants}
-	          viewport={{ once: true, amount: 0.3 }}
-		  >
-			  {experiencesData.map((experience, index) => (
-				<ExperienceCard key={index} {...experience} />
-			  ))}
-		  </motion.div>
-	  </section>
-	);
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.h3
+          className="text-white text-3xl font-bold font-defaultFont mb-7"
+          variants={item}
+        >
+          Pourquoi Nous Choisir
+        </motion.h3>
+        <motion.p className="text-white text-base" variants={item}>
+          Chez le banquet, chaque repas est une découverte culinaire, créée avec
+          soin par nos chefs. Profitez d&#39;une ambiance conviviale et de
+          saveurs authentiques dans chaque plat.
+        </motion.p>
+        <motion.div className="flex justify-center" variants={item}>
+          <LearnMoreButton />
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="flex flex-col w1200:flex-row justify-center gap-6"
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {experiencesData.map((experience, index) => (
+          <ExperienceCard key={index} {...experience} />
+        ))}
+      </motion.div>
+    </section>
+  );
 }
 
-
-export default ExperienceSection
+export default ExperienceSection;
