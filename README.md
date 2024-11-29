@@ -70,7 +70,7 @@ The visual design of this project, including the color scheme and layout, was in
 However, no code from the template was used, only the aesthetic elements influenced the design choices.
 
 ## Backend API
-For the configuration of the backend API, please refer to the README of the [API repository](https://github.com/yourusername/api-repo) for detailed instructions.
+For the configuration of the backend API, please refer to the README of the [API repository](https://github.com/anliomar-dev/restoBackend) for detailed instructions.
 
 ## Consuming the API
 You can create your own frontend to consume the API and display dishes. The API is available at [https://omaranli.alwaysdata.net/](https://omaranli.alwaysdata.net/) and allows you to:
@@ -83,6 +83,6 @@ If you want to contribute to the backend, you can help improve the API by adding
 - Enabling users to create a restaurant and add dishes specifically related to that restaurant.
 - Allowing users to display their own dishes in their personalized interface.
 
-For detailed instructions on how to contribute to the API, please refer to the [API repository](https://github.com/yourusername/api-repo).
+For detailed instructions on how to contribute to the API, please refer to the [API repository](https://github.com/anliomar-dev/restoBackend).
 
 
