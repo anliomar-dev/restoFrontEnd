@@ -86,8 +86,8 @@ function ExperienceSection() {
     >
       <motion.div
         className="
-		    bg-accentHover w-auto md-w-2/5 max-h-[370px]
-		    py-8 px-6 flex flex-col justify-center"
+        bg-accentHover w-auto md-w-2/5 max-h-[370px]
+        py-8 px-6 flex flex-col justify-center"
         initial="hidden"
         whileInView="visible"
         variants={containerVariants}

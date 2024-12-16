@@ -1,4 +1,3 @@
-import BG404 from '../../public/BG404.png';
 import {NavLink} from "react-router-dom";
 import {House} from "lucide-react";
 import {motion} from "framer-motion";
@@ -25,7 +24,7 @@ function NotFound() {
 				</motion.div>
 			</NavLink>
 
-			<img src={BG404} alt=""/>
+			<img src="/BG404.png" alt=""/>
 		</div>
 	</div>;
 }
