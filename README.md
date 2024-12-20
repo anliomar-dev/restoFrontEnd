@@ -30,7 +30,7 @@ The project was created to demonstrate my skills in front-end and back-end devel
 
 ## 🖥️ Live Demo
 
-[View Live Demo](https://www.example.com)
+[View Live Demo](https://lebanquet.netlify.app/)
 
 ## 📸 Screenshots
 
